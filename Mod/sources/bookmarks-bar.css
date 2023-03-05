@@ -1,31 +1,40 @@
 .bookmark-bar {
   background-color: var(--colorAccentBg);
-  height          : 31px;
-  box-shadow      : none !important;
-  border          : none !important;
-  margin-left     : 40px;
-  border-left     : 1px solid var(--colorHighlightBg) !important;
+  height: 31px;
+  box-shadow: none !important;
+  border: none !important;
+  margin-left: 40px;
+  border-left: 1px solid var(--colorHighlightBg) !important;
 }
 
 .bookmark-bar .observer {
-  border-left: 1px solid var(--colorAccentBg);
   align-items: center;
+  padding-inline: 5px;
+  padding-block: 3px;
+  gap: 0.5rem;
 }
 
 .bookmarkbarItem {
   border-radius: 0px !important;
-  padding      : 0px 5px !important;
+  padding: 0px 5px !important;
 }
 
 .bookmark-bar button svg.folder-icon {
   stroke: var(--colorFg) !important;
   height: 16px;
-  width : 16px;
+  width: 16px;
 }
 
 .bookmark-bar button {
-  background-color: var(--colorAccentBg) !important;
-  height          : 28px !important;
+  /*background-color: var(--colorAccentBg) !important;*/
+  height: 100% !important;
+  cursor: pointer;
+  padding-inline: 5px !important;
+  border-radius: 5px !important;
+}
+
+.bookmark-bar button:not(.chevron):before {
+  content: unset;
 }
 
 .bookmarkbarItem:hover {
@@ -37,11 +46,11 @@
 }
 .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
-  backdrop-filter : var(--backgroundBlur);
-  content         : " ";
-  width           : 40px;
+  backdrop-filter: var(--backgroundBlur);
+  /*content         : " ";*/
+  width: 40px;
   height: 31px;
-  position        : fixed;
-  left            : 0;
-  z-index         : 0;
+  position: fixed;
+  left: 0;
+  z-index: 0;
 }
