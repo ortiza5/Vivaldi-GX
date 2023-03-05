@@ -43,7 +43,6 @@
   opacity: 1 !important;
 }
 
-
 #tabs-container .tab:not(.tab-group):not(.tab-in-accordion) {
   clip-path: polygon(6.5px 0%, 100% 0, 100% 100%, 0 100%, 0% 6.5px);
 }
@@ -246,8 +245,8 @@
   border-right-color: transparent !important;
 }
 
-
-.tab-group, .tab-in-accordion {
+.tab-group,
+.tab-in-accordion {
   border-radius: 0px !important;
 }
 
@@ -303,19 +302,19 @@
 }
 
 .tab-in-accordion .svg-tab-stack {
-    top: 0px;
-    left: 0px;
-    border-radius: 0px;
+  top: 0px;
+  left: 0px;
+  border-radius: 0px;
 }
-.tab-in-accordion .svg-tab-stack > .stack-frame{
-    stroke: var(--colorHighlightBg);
-    stroke-width: 2px;
-    rx: 0px;
-    ry: 0px;
+.tab-in-accordion .svg-tab-stack > .stack-frame {
+  stroke: var(--colorHighlightBg);
+  stroke-width: 2px;
+  rx: 0px;
+  ry: 0px;
 }
 
 .accordion-toggle-arrow .VivaldiSvgIcon.left {
-    fill: var(--colorHighlightBg);
+  fill: var(--colorHighlightBg);
 }
 
 .tab-position .tab .tab-header .button-badge {
@@ -542,7 +541,7 @@ div#tabs-container {
   margin: 0px 1px 0px 0px !important;
 }
 
-#browser:not(.accordion-tabs-on) svg.svg-tab-stack{
+#browser:not(.accordion-tabs-on) svg.svg-tab-stack {
   display: none !important;
 }
 
