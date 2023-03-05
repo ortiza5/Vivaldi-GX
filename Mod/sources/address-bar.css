@@ -3,6 +3,32 @@
   border-left: 1px solid var(--colorHighlightBg) !important;
 }
 
+.toolbar-mainbar {
+  background-color: var(--colorAccentBg);
+}
+
+.mainbar {
+  padding-left: 40px;
+}
+
+.button-toolbar {
+  margin: 0;
+  align-self: center !important;
+}
+
+.pageload {
+  display: none !important;
+}
+
+.BookmarkButton {
+  margin: 0;
+}
+
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput {
+  margin-left: 20px;
+}
+
+
 div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   padding-top   : 3px;
   padding-bottom: 3px;
@@ -79,8 +105,14 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .toolbar.toolbar-small.toolbar-insideinput:last-of-type {
-  margin-top  : 0px;
-  margin-right: 9px;
+  margin-top: 0px;
+  margin-right: 20px;
+  min-width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  align-items: center;
+  height: 100%;
 }
 
 .create-bookmark button.button-on svg {
@@ -88,7 +120,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .UrlBar-AddressField>.toolbar-insideinput.toolbar-small>.button-toolbar:not(:last-of-type) {
-  margin-right: 3px;
+  margin-block: auto;
 }
 
 .create-bookmark button svg {
@@ -175,6 +207,7 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
   margin-right: 3px;
   height      : fit-content;
+  border-left: 1px solid var(--colorHighlightBg);
 }
 
 .toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {
@@ -200,18 +233,18 @@ button.button-on .bookmark-outline {
 }
 
 .UrlBar-AddressField::before {
-  left: 0px !important;
+  left: 5px !important;
 }
 
 .UrlBar-AddressField::after {
-  right: 0px !important;
+  right: 10px !important;
 }
 
 .UrlBar-AddressField:hover::before,
 .UrlBar-AddressField:hover::after,
 .UrlBar-AddressField:focus-within::before,
 .UrlBar-AddressField:focus-within::after {
-  color: transparent !important;
+  /*color: transparent !important;*/
 }
 
 .create-qr-code button svg {
@@ -297,10 +330,10 @@ button.button-on .bookmark-outline {
 .SiteInfoButton-SearchEngineFavicon {
   height          : 17px !important;
   width           : 16px !important;
-  margin-left     : 22px !important;
   margin-top      : 0px !important;
   border-radius   : 0px !important;
   border-width    : 0px !important;
+  margin-left: 15px !important;
   background-color: transparent !important;
 }
 
@@ -349,10 +382,10 @@ button.button-on .bookmark-outline {
 }
 
 .UrlBar-UrlFieldWrapper .observer .UrlField input {
-  padding-left: 18px !important;
   margin-top  : 0px !important;
   padding-top : 5px !important;
   color       : var(--colorAccentFg);
+  padding-left: 10px !important;
 }
 
 .toolbar-mainbar .searchfield-input,
@@ -475,16 +508,16 @@ span.OmniLinkItem-Details {
   fill            : var(--colorHighlightBgAlpha) !important;
 }
 
-.UrlBar-AddressField>.toolbar-insideinput:first-child,
-.UrlBar-AddressField>.toolbar-insideinput:nth-child(2) {
-  position: absolute;
-  right   : 33px;
-  z-index : 2;
-}
+/*.UrlBar-AddressField > .toolbar-insideinput:first-child,*/
+/*.UrlBar-AddressField > .toolbar-insideinput:nth-child(2) {*/
+/*    position: absolute;*/
+/*    right: 25px;*/
+/*    z-index: 2;*/
+/*}*/
 
-.UrlBar-AddressField>.toolbar-small.toolbar-insideinput:last-of-type .button-toolbar:last-child {
-  margin-left: 23px;
-}
+/*.UrlBar-AddressField > .toolbar-small.toolbar-insideinput:last-of-type .button-toolbar:last-child {*/
+/*    margin-left: 23px;*/
+/*}*/
 
 .UrlBar-PrivateWindowIndicator {
   background-color: var(--colorHighlightBg);
@@ -611,7 +644,7 @@ progress.pageload-indicator {
 }
 
 .UrlBar-AddressField .BookmarkButton {
-  margin-right: 4px;
+  /*margin-right: 4px;*/
 }
 
 .toolbar.toolbar-small.toolbar-insideinput:not(:last-of-type) {

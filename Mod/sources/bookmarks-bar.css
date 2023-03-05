@@ -8,8 +8,10 @@
 }
 
 .bookmark-bar .observer {
-  border-left: 1px solid var(--colorAccentBg);
   align-items: center;
+  padding-inline: 5px;
+  padding-block: 3px;
+  gap: 0.5rem;
 }
 
 .bookmarkbarItem {
@@ -24,8 +26,15 @@
 }
 
 .bookmark-bar button {
-  background-color: var(--colorAccentBg) !important;
-  height          : 28px !important;
+  /*background-color: var(--colorAccentBg) !important;*/
+  height          : 100% !important;
+  cursor: pointer;
+  padding-inline: 5px !important;
+  border-radius: 5px !important;
+}
+
+.bookmark-bar button:not(.chevron):before {
+  content: unset;
 }
 
 .bookmarkbarItem:hover {
@@ -38,7 +47,7 @@
 .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter : var(--backgroundBlur);
-  content         : " ";
+  /*content         : " ";*/
   width           : 40px;
   height: 31px;
   position        : fixed;

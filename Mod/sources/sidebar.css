@@ -2,6 +2,10 @@
     background-color: var(--colorBg) !important;
 }
 
+#switch::-webkit-scrollbar {
+  display: none;
+}
+
 #panels-container.left #switch,
 #switch>button:focus:not(active) {
     box-shadow  : none !important;
@@ -9,15 +13,19 @@
 }
 
 #panels #switch {
-    margin-left    : 3px !important;
-    margin-bottom  : 40px !important;
-    backdrop-filter: none !important;
+  margin-left    : 3px !important;
+  margin-bottom  : 40px !important;
+  backdrop-filter: none !important;
 }
 
 #panels:not(.leak) #switch {
     overflow-y: auto;
     max-width : 100%;
     overflow-x: hidden;
+}
+
+#switch > button{
+  cursor: pointer;
 }
 
 #panels.leak #switch>div.addwebpanel-wrapper {
@@ -39,8 +47,8 @@
 }
 
 #panels-container:not(.overlay):not([style*="width: 0px;"]) {
-    min-width   : 40px !important;
-    border-right: none !important;
+  min-width   : 41px !important;
+  border-right: 1px solid var(--colorHighlightBg);;
 }
 
 #browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
@@ -242,10 +250,10 @@
     box-shadow: none !important;
 }
 
-#panels-container:not([style*="width: 0px;"])::before {
     content        : " ";
     backdrop-filter: var(--backgroundBlur);
     width          : 40px;
     height         : 100%;
     position       : fixed;
-}
+#panels-container::before {
+  content        : " ";
