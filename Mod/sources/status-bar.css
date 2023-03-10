@@ -12,7 +12,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-image: linear-gradient(to right, transparent 40px, var(--colorHighlightBg) 50vw, transparent 100vw);
+  background-image: linear-gradient(to right, transparent 40px, var(--colorHighlightBgDark) 50vw, transparent 100vw);
 }
 
 .toolbar-statusbar > div > button,
@@ -54,14 +54,14 @@ button.ClockPopup-Preset:hover + button.ClockPopup-Preset-Clear {
 
 .toolbar-statusbar .page-zoom-controls,
 .toolbar-statusbar .page-zoom-controls .zoom-percent {
-  color: var(--colorHighlightBg) !important;
+  color: var(--colorHighlightBgFaded) !important;
 }
 
 .toolbar-statusbar .page-zoom-controls .button-title {
-  color: var(--colorFg) !important;
+  color: var(--colorHighlightBg) !important;
 }
 
 .toolbar-statusbar .page-zoom-controls button:disabled > .button-title {
   color: var(--colorHighlightBg) !important;
-  opacity: 0.3;
+  opacity: 0.5;
 }

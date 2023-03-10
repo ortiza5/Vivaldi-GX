@@ -14,7 +14,7 @@
 
 #panels #switch {
   margin-left: 3px !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 0px !important;
   backdrop-filter: none !important;
 }
 
@@ -46,19 +46,19 @@
   margin-bottom: 12px;
 }
 
-#panels-container:not(.overlay):not([style*="width: 0px;"]) {
+#panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
   min-width: 41px !important;
   border-right: 1px solid var(--colorHighlightBg);
+  border-top: -20px;
 }
 
 #browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
   min-width: 0px !important;
 }
 
-#panels-container:not(.overlay) .panel-group {
-  margin-left: 3px !important;
-  border-top: 1px solid var(--colorHighlightBg) !important;
-  border-bottom: none !important;
+#panels-container {
+  border-right: 1px solid;
+  border-image: linear-gradient(var(--colorHighlightBgDark), var(--colorWindowBg)) 1;
 }
 
 #panels-container.overlay .panel-group {
@@ -113,11 +113,11 @@
   background-color: transparent;
 }
 
-#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"]) + #webview-container {
+#panels-container:not([style*="width: 0px;"]) + #webview-container {
   border-left: 1px solid var(--colorBg) !important;
 }
 
-#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"]) + #webview-container:before {
+#panels-container:not([style*="width: 0px;"]) + #webview-container:before {
   content: " ";
   position: absolute;
   height: 100%;
@@ -238,6 +238,10 @@
 }
 
 .webpanel-header .button-toolbar button {
+  border: none !important;
+}
+
+.left.switcher {
   border: none !important;
 }
 

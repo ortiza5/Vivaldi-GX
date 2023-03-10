@@ -3,8 +3,7 @@
   height: 31px;
   box-shadow: none !important;
   border: none !important;
-  margin-left: 40px;
-  border-left: 1px solid var(--colorHighlightBg) !important;
+  border-left: 40px solid var(--colorWindowBg) !important;
 }
 
 .bookmark-bar .observer {
@@ -12,6 +11,12 @@
   padding-inline: 5px;
   padding-block: 3px;
   gap: 0.5rem;
+  border-left: 1px var(--colorHighlightBgDark) solid;
+}
+
+/* Bookmark text expansion control */
+.BookmarkButton BookmarkButton--Active {
+  width: auto !important;
 }
 
 .bookmarkbarItem {
@@ -38,7 +43,7 @@
 }
 
 .bookmarkbarItem:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--colorAccentBgFadedMore) !important;
 }
 
 .address-top .toolbar-mainbar:after {

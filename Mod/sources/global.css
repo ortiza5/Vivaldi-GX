@@ -7,8 +7,10 @@
 }
 
 #titlebar button.vivaldi {
-  margin-left: 3px;
   margin-top: 3px;
+  margin-left: 3px;
+  border-left: 0px solid var(--colorBg) !important;
+  border-top: 0px solid var(--colorBg) !important;
 }
 
 .vivaldi span.burger-icon {
@@ -16,7 +18,7 @@
 }
 
 .vivaldi:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--colorAccentBgFadedMore) !important;
 }
 
 .UrlBar > div:not(.UrlBar-AddressField) .button-popup {
@@ -107,8 +109,5 @@
 
 #browser.win .window-buttongroup {
   fill: var(--colorHighlightBg);
-}
-
-#browser.win .window-buttongroup button:hover:not(.window-close) {
-  background-color: var(--WButtonHoverBg) !important;
+  color: var(--colorHighlightBg);
 }

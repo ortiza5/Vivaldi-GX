@@ -8,7 +8,7 @@
 }
 
 .mainbar {
-  padding-left: 40px;
+  border-left: 40px var(--colorWindowBg) solid;
 }
 
 .button-toolbar {
@@ -76,7 +76,8 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .toolbar-mainbar .SearchField-Popup .SearchField {
   background-color: var(--colorAccentBg) !important;
   border: none !important;
-  height: 27px !important;
+  height: 29px !important;
+  margin-top: 1px !important;
 }
 
 .UrlField {
@@ -106,7 +107,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 .toolbar.toolbar-small.toolbar-insideinput:last-of-type {
   margin-top: 0px;
   margin-right: 20px;
-  min-width: 200px;
+  min-width: 20px;
   display: flex;
   justify-content: flex-end;
   gap: 5px;
@@ -204,9 +205,10 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
 }
 
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
-  margin-right: 3px;
+  margin-right: 0px;
   height: fit-content;
-  border-left: 1px solid var(--colorHighlightBg);
+  border-left: 1px solid var(--colorHighlightBgDark);
+  border-right: 5px solid var(--colorAccentBg);
 }
 
 .toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {
@@ -224,7 +226,7 @@ button.button-on .bookmark-outline {
 .UrlBar-AddressField::after {
   content: var(--verticalEllipsis) !important;
   background-color: transparent !important;
-  height: 28px !important;
+  height: 30px !important;
   position: absolute !important;
   width: unset !important;
   z-index: 1 !important;
@@ -387,7 +389,7 @@ button.button-on .bookmark-outline {
 }
 
 .UrlBar-UrlFieldWrapper .observer .UrlField input {
-  padding-left: 10px !important;
+  padding-left: 18px !important;
   margin-top: 0px !important;
   padding-top: 5px !important;
   color: var(--colorAccentFg);
@@ -409,10 +411,14 @@ button.button-on .bookmark-outline {
   background-color: var(--colorAccentBgFadedMore) !important;
   color: var(--colorAccentFg);
   fill: var(--colorAccentFg);
+  margin-top: 3px !important;
+  border-left: 2px solid var(--colorAccentBgFadedMost) !important;
+  border-bottom: 2px solid var(--colorAccentBgFadedMost) !important;
+  border-right: 2px solid var(--colorAccentBgFadedMost) !important;
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
-  border-bottom-left-radius: 10px !important;
-  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
 }
 
 .OmniLinkItem {
@@ -428,7 +434,7 @@ button.button-on .bookmark-outline {
 }
 
 .OmniLinkItem:not(.OmniLinkItem--SingleValue) .OmniLinkItem-Url {
-  color: var(--colorHighlightBg);
+  color: var(--colorHighlightBgFaded);
 }
 
 .OmniLinkItem .OmniLinkItem-Url {
@@ -509,8 +515,9 @@ span.OmniLinkItem-Details {
 }
 
 .OmniLinkItem-EraseButton:hover {
-  background-color: var(--colorAccentBgFadedMore);
-  fill: var(--colorHighlightBgAlpha) !important;
+  background-color: var(--colorAccentBgAlpha);
+  fill: var(--colorFg) !important;
+  right: 6px;
 }
 
 /*.UrlBar-AddressField > .toolbar-insideinput:first-child,*/
@@ -527,9 +534,10 @@ span.OmniLinkItem-Details {
 .UrlBar-PrivateWindowIndicator {
   background-color: var(--colorHighlightBg);
   border: 1px solid var(--colorHightlightFg);
-  height: 19px;
+  height: 20px;
   align-self: center;
-  margin-left: 8px;
+  margin-left: 1px;
+  margin-right: 0px;
   color: var(--colorHighlightFg);
 }
 
