@@ -2,8 +2,9 @@
   --GXbuttonFill: var(--colorHighlightBgDark);
   --GXbuttonBgHover: var(--colorAccentBgFaded);
   --GXborderColor: var(--GXbuttonFill);
-  /* set to "currentColor" to get original look of Opera GX */
+  /* set the 2 variables below to "currentColor" to get original look of Opera GX */
   --GXaddressBarButtonFill: var(--GXbuttonFill);
+  --GXbookmarkBarButtonFill: var(--GXbuttonFill);
   --spnr1: #949499;
   --spnr2: #838489;
   --spnr3: #807f85;

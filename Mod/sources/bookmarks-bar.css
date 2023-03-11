@@ -24,12 +24,6 @@
   padding: 0px 5px !important;
 }
 
-.bookmark-bar button svg.folder-icon {
-  stroke: var(--colorFg) !important;
-  height: 16px;
-  width: 16px;
-}
-
 .bookmark-bar button {
   /*background-color: var(--colorAccentBg) !important;*/
   height: 100% !important;
@@ -58,4 +52,17 @@
   position: fixed;
   left: 0;
   z-index: 0;
+}
+
+.bookmark-bar button {
+  color: var(--GXbookmarkBarButtonFill);
+}
+
+.bookmark-bar button svg {
+  fill: var(--GXbookmarkBarButtonFill);
+}
+
+/* make folders follow other fill */
+svg.folder-icon .fill-override.fill-override.fill-override.fill-override > svg {
+  fill: var(--GXbookmarkBarButtonFill);
 }
