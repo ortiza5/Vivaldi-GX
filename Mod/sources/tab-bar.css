@@ -389,6 +389,11 @@ div#tabs-container {
   background-color: transparent !important;
 }
 
+/* remove gap between tab stack tooltip and tab bar */
+#browser.tabs-top > #vivaldi-tooltip .tooltip {
+  top: 39px !important;
+}
+
 .tab.tab-group:not(.active) + .tab-group-indicator .tab-indicator:not(.active),
 .tab.tab-group:not(.active) + .tab-group-indicator .tab-indicator:not(.active):hover {
   transition: 0.1s ease;
