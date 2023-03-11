@@ -276,14 +276,6 @@ button.button-on .bookmark-outline {
   flex: 0 0 15px !important;
 }
 
-.toolbar.toolbar-small.toolbar-insideinput .button-toolbar > button,
-.UrlBar-AddressField > .BookmarkButton,
-.UrlBar-AddressField > .toolbar-insideinput:first-child button {
-  border: none !important;
-  height: 19px !important;
-  width: 19px !important;
-}
-
 .button-popup-wrapper,
 .button-popup-wrapper .UrlBar-AddressField-popup-header,
 #modal-bg,
