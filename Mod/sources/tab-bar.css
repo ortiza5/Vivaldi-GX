@@ -566,7 +566,7 @@ svg.svg-tab-stack {
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container::before {
   content: " ";
-  background-image: linear-gradient(to right, transparent 40px, var(--colorBg) var(--transitionTabBarGradient), transparent var(--transitionTabBarGradientB));
+  background-image: linear-gradient(to right, var(--colorBg) var(--transitionTabBarGradient), transparent var(--transitionTabBarGradientB));
   width: 100%;
   z-index: 0;
   height: 100%;
