@@ -1,5 +1,4 @@
 #browser.tabs-top.address-top div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
-  margin-left: 40px;
   border-left: 1px solid var(--colorHighlightBg) !important;
 }
 
@@ -8,7 +7,18 @@
 }
 
 .mainbar {
-  border-left: 40px var(--colorWindowBg) solid;
+  margin-left: 40px;
+}
+
+.mainbar::before {
+  background-color: var(--colorBgAlphaBlur);
+  backdrop-filter: var(--backgroundBlur);
+  content: " ";
+  width: 40px;
+  height: 34px;
+  position: fixed;
+  left: 0;
+  z-index: 0;
 }
 
 .button-toolbar {

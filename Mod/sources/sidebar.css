@@ -48,8 +48,6 @@
 
 #panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
   min-width: 41px !important;
-  border-right: 1px solid var(--colorHighlightBg);
-  border-top: -20px;
 }
 
 #browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
@@ -57,8 +55,23 @@
 }
 
 #panels-container {
-  border-right: 1px solid;
-  border-image: linear-gradient(var(--colorHighlightBgDark), var(--colorWindowBg)) 1;
+  --GX-BorderGradient: linear-gradient(var(--colorHighlightBgDark) 25%, var(--colorWindowBg) 85%) 1;
+  border-image: var(--GX-BorderGradient);
+}
+
+/* wrap border around expanded panels */
+.panel-group {
+  border-image: var(--GX-BorderGradient);
+}
+.panel-group::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 1px;
+  background-color: var(--colorHighlightBgDark);
+  top: 0;
+  margin-left: 3px;
 }
 
 #panels-container.overlay .panel-group {
@@ -252,12 +265,4 @@
 
 #panels-container {
   box-shadow: none !important;
-}
-
-#panels-container::before {
-  content: " ";
-  backdrop-filter: var(--backgroundBlur);
-  width: 40px;
-  height: 100%;
-  position: fixed;
 }

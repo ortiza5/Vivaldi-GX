@@ -3,7 +3,7 @@
   height: 31px;
   box-shadow: none !important;
   border: none !important;
-  border-left: 40px solid var(--colorWindowBg) !important;
+  margin-left: 40px;
 }
 
 .bookmark-bar .observer {
@@ -52,9 +52,9 @@
 .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
-  /*content         : " ";*/
+  content: " ";
   width: 40px;
-  height: 31px;
+  height: 29px;
   position: fixed;
   left: 0;
   z-index: 0;
