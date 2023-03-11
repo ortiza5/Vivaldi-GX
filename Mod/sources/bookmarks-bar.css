@@ -11,7 +11,7 @@
   padding-inline: 5px;
   padding-block: 3px;
   gap: 0.5rem;
-  border-left: 1px var(--colorHighlightBgDark) solid;
+  border-left: 1px var(--GXborderColor) solid;
 }
 
 /* Bookmark text expansion control */
@@ -43,7 +43,7 @@
 }
 
 .bookmarkbarItem:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
 }
 
 .address-top .toolbar-mainbar:after {

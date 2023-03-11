@@ -2,12 +2,12 @@
   border-width: 1px 0px 0px 0px;
   border-style: solid;
   border-top-color: transparent;
-  border-bottom-color: var(--colorHighlightBgDark);
+  border-bottom-color: var(--GXborderColor);
 }
 
 #tabs-container .tab.active {
   border-width: 1px 1px 0px 1px;
-  border-color: var(--colorHighlightBgDark);
+  border-color: var(--GXborderColor);
   border-bottom-color: transparent;
 }
 
@@ -19,7 +19,7 @@
 #tabs-subcontainer .tab.active {
   border-width: 1px 1px 0px 1px;
   border-style: solid;
-  border-color: var(--colorHighlightBgDark);
+  border-color: var(--GXborderColor);
 }
 
 #tabs-subcontainer .tab.active .tab-header > .close {
@@ -54,11 +54,11 @@
 }
 
 #tabs-container .tab:not(.tab-group).active {
-  background-image: linear-gradient(135deg, var(--colorHighlightBgDark) 4.5px, transparent 0px);
+  background-image: linear-gradient(135deg, var(--GXborderColor) 4.5px, transparent 0px);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .tab:not(.tab-group).active {
-  background-color: var(--colorHighlightBgDark) !important;
+  background-color: var(--GXborderColor) !important;
   color: var(--colorHighlightFgDark);
   fill: var(--colorHighlightFgDark);
 }
@@ -69,7 +69,7 @@
 #tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:after {
   --modLineWidth: 25vw;
   content: " ";
-  background-image: linear-gradient(to right, var(--colorHighlightBgDark), transparent);
+  background-image: linear-gradient(to right, var(--GXborderColor), transparent);
   width: var(--modLineWidth);
   height: 1px;
   position: absolute;
@@ -104,7 +104,7 @@
 #tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:before,
 #tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:before {
   content: " ";
-  background-color: var(--colorHighlightBgDark);
+  background-color: var(--GXborderColor);
   width: 100.03vw;
   height: 1px;
   position: absolute;
@@ -160,7 +160,7 @@
 }
 
 .tab-position .tab.unread .close:not(:hover) {
-  background-color: var(--colorHighlightBgDark) !important;
+  background-color: var(--GXbuttonFill) !important;
   border-radius: 100%;
   transform: scale(0.5);
 }
@@ -192,7 +192,7 @@
 
 #tabs-container[style*="flex-grow: 0;"] .tab.active.marked {
   background-color: transparent !important;
-  border: 2px solid var(--colorHighlightBgDark) !important;
+  border: 2px solid var(--GXborderColor) !important;
 }
 
 .tab.marked:not(.active) .tab-indicator.marked.active.tab-indicator.marked:after {
@@ -212,7 +212,7 @@
   background-color: transparent !important;
   height: 8px !important;
   border-top: none !important;
-  border-bottom: 1px solid var(--colorHighlightBgDark) !important;
+  border-bottom: 1px solid var(--GXborderColor) !important;
 }
 
 .tab-group.active + .tab-group-indicator {
@@ -220,15 +220,15 @@
 }
 
 .tab-group + .tab-group-indicator .tab-indicator + .tab-indicator {
-  border-left: 1px solid var(--colorHighlightBgDark) !important;
+  border-left: 1px solid var(--GXborderColor) !important;
 }
 
 .tab-group:not(.active) + .tab-group-indicator .tab-indicator:first-of-type {
-  border-left: 1px solid var(--colorHighlightBgDark);
+  border-left: 1px solid var(--GXborderColor);
 }
 
 .tab-group:not(.active) + .tab-group-indicator .tab-indicator:last-of-type {
-  border-right: 1px solid var(--colorHighlightBgDark);
+  border-right: 1px solid var(--GXborderColor);
 }
 
 .tab-group:not(.active) + .tab-group-indicator .tab-indicator.active:not(.marked):hover {
@@ -240,7 +240,7 @@
 }
 
 .tab-group-indicator .tab-indicator.marked {
-  background-color: var(--colorHighlightBgDark) !important;
+  background-color: var(--GXborderColor) !important;
   border-left-color: transparent !important;
   border-right-color: transparent !important;
 }
@@ -257,7 +257,7 @@
 .tab-group.active + .tab-group-indicator {
   border-width: 1px 1px 0 1px;
   border-style: solid;
-  border-color: var(--colorHighlightBgDark);
+  border-color: var(--GXborderColor);
   padding-left: 0px !important;
   padding-right: 0px !important;
   margin-right: 1px;
@@ -398,7 +398,7 @@ div#tabs-container {
   height: 11px !important;
   width: 11px !important;
   flex: none !important;
-  fill: var(--colorHighlightBgDark);
+  fill: var(--GXbuttonFill);
 }
 
 #tabs-container[style*="flex-grow: 0;"] .newtab button svg {
@@ -433,7 +433,7 @@ div#tabs-container {
 }
 
 .toolbar-tabbar.sync-and-trash-container button svg {
-  fill: var(--colorHighlightBg);
+  fill: var(--GXbuttonFill);
 }
 
 .toolbar-tabbar.sync-and-trash-container button {
@@ -441,7 +441,7 @@ div#tabs-container {
 }
 
 .toolbar-tabbar.sync-and-trash-container button:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
 }
 
 .newtab > button {
@@ -513,7 +513,7 @@ div#tabs-container {
 #tabs-subcontainer {
   margin-left: 40px !important;
   margin-top: -1px !important;
-  border-left: 1px solid var(--colorHighlightBgDark) !important;
+  border-left: 1px solid var(--GXborderColor) !important;
   box-shadow: none !important;
   z-index: 1;
 }
@@ -533,7 +533,7 @@ svg.svg-tab-stack {
 
 .stack-counter {
   align-self: center;
-  background-color: var(--colorHighlightBgDark) !important;
+  background-color: var(--GXbuttonFill) !important;
   color: var(--colorHighlightFg) !important;
 }
 
@@ -543,7 +543,7 @@ svg.svg-tab-stack {
 }
 
 .subcontainer-lock button {
-  fill: var(--colorHighlightBgDark);
+  fill: var(--GXbuttonFill);
 }
 
 #browser.tabs-top:not(.address-top).tabs-at-edge #header {

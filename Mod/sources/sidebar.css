@@ -55,13 +55,13 @@
 }
 
 #panels-container {
-  --GX-BorderGradient: linear-gradient(var(--colorHighlightBgDark) 25%, var(--colorWindowBg) 85%) 1;
-  border-image: var(--GX-BorderGradient);
+  --GXborderGradient: linear-gradient(var(--GXborderColor) 25%, var(--colorWindowBg) 85%) 1;
+  border-image: var(--GXborderGradient);
 }
 
 /* wrap border around expanded panels */
 .panel-group {
-  border-image: var(--GX-BorderGradient);
+  border-image: var(--GXborderGradient);
 }
 .panel-group::before {
   content: "";
@@ -69,7 +69,7 @@
   width: 100%;
   z-index: 1;
   height: 1px;
-  background-color: var(--colorHighlightBgDark);
+  background-color: var(--GXborderColor);
   top: 0;
   margin-left: 3px;
 }

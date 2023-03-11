@@ -1,5 +1,5 @@
 #browser.tabs-top.address-top div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
-  border-left: 1px solid var(--colorHighlightBg) !important;
+  border-left: 1px solid var(--GXborderColor) !important;
 }
 
 .toolbar-mainbar {
@@ -126,7 +126,7 @@ div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
 }
 
 .create-bookmark button.button-on svg {
-  stroke: var(--colorHighlightBg);
+  stroke: var(--GXbuttonFill);
 }
 
 .UrlBar-AddressField > .toolbar-insideinput.toolbar-small > .button-toolbar:not(:last-of-type) {
@@ -217,7 +217,7 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
   margin-right: 0px;
   height: fit-content;
-  border-left: 1px solid var(--colorHighlightBgDark);
+  border-left: 1px solid var(--GXborderColor);
   border-right: 5px solid var(--colorAccentBg);
 }
 
@@ -229,7 +229,7 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
 
 button.button-on .bookmark-animated-fill,
 button.button-on .bookmark-outline {
-  fill: var(--colorHighlightBg) !important;
+  fill: var(--GXbuttonFill) !important;
 }
 
 .UrlBar-AddressField::before,
@@ -296,7 +296,7 @@ button.button-on .bookmark-outline {
 
 .ContentBlocker-Control button > span path.ads {
   opacity: var(--blocking) !important;
-  fill: var(--colorHighlightBg);
+  fill: var(--GXbuttonFill);
   fill-opacity: 1 !important;
 }
 
@@ -305,7 +305,7 @@ button.button-on .bookmark-outline {
 }
 
 .ContentBlocker-Control button[style*="--blocking:1;"] > span path.outline {
-  fill: var(--colorHighlightBg);
+  fill: var(--GXbuttonFill);
   opacity: var(--blocking) !important;
 }
 
@@ -357,7 +357,7 @@ button.button-on .bookmark-outline {
 }
 
 .button-addressfield.SiteInfoButton.internal svg {
-  fill: var(--colorHighlightBg) !important;
+  fill: var(--GXbuttonFill) !important;
   padding-left: 1px;
 }
 

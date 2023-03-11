@@ -1,5 +1,5 @@
 .vivaldi svg > path:nth-child(1) {
-  fill: var(--colorHighlightBg) !important;
+  fill: var(--GXbuttonFill) !important;
 }
 
 .vivaldi svg > path:nth-child(2) {
@@ -18,7 +18,7 @@
 }
 
 .vivaldi:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
 }
 
 .UrlBar > div:not(.UrlBar-AddressField) .button-popup {
@@ -108,10 +108,18 @@
 }
 
 #browser.win .window-buttongroup {
-  fill: var(--colorHighlightBg);
-  color: var(--colorHighlightBg);
+  fill: var(--GXbuttonFill);
+  color: var(--GXbuttonFill);
 }
 
 #browser.win .window-buttongroup button:hover:not(.window-close) {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
+}
+
+.button-toolbar > button {
+  fill: var(--GXbuttonFill);
+}
+
+.mainbar .button-toolbar > button {
+  fill: var(--GXaddressBarButtonFill);
 }
