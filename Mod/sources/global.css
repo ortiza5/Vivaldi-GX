@@ -18,7 +18,7 @@
 }
 
 .vivaldi:hover {
-  background-color: var(--colorAccentBgFadedMore) !important;
+  background-color: var(--WButtonHoverBg) !important;
 }
 
 .UrlBar > div:not(.UrlBar-AddressField) .button-popup {
@@ -110,4 +110,8 @@
 #browser.win .window-buttongroup {
   fill: var(--colorHighlightBg);
   color: var(--colorHighlightBg);
+}
+
+#browser.win .window-buttongroup button:hover:not(.window-close) {
+  background-color: var(--WButtonHoverBg) !important;
 }

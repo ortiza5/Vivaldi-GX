@@ -441,7 +441,7 @@ div#tabs-container {
 }
 
 .toolbar-tabbar.sync-and-trash-container button:hover {
-  background-color: var(--colorAccentBgFaded) !important;
+  background-color: var(--WButtonHoverBg) !important;
 }
 
 .newtab > button {

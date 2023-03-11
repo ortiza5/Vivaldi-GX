@@ -43,7 +43,7 @@
 }
 
 .bookmarkbarItem:hover {
-  background-color: var(--colorAccentBgFadedMore) !important;
+  background-color: var(--WButtonHoverBg) !important;
 }
 
 .address-top .toolbar-mainbar:after {

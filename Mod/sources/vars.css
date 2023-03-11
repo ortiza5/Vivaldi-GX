@@ -1,5 +1,5 @@
-:root {
-  --WButtonHoverBg: #38444f;
+#browser {
+  --WButtonHoverBg: var(--colorAccentBgFaded);
   --spnr1: #949499;
   --spnr2: #838489;
   --spnr3: #807f85;
