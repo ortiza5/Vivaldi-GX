@@ -389,9 +389,18 @@ div#tabs-container {
   background-color: transparent !important;
 }
 
-/* remove gap between tab stack tooltip and tab bar */
-#browser.tabs-top > #vivaldi-tooltip .tooltip {
+/* remove gap between tab popup tooltip and tab bar */
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 34px;"] {
+  top: 30px !important;
+}
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 43px;"] {
   top: 39px !important;
+}
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 65px;"] {
+  top: 61px !important;
+}
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 74px;"] {
+  top: 70px !important;
 }
 
 .tab.tab-group:not(.active) + .tab-group-indicator .tab-indicator:not(.active),
