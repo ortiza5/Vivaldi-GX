@@ -1,4 +1,4 @@
-#browser.tabs-top.address-top div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
+#browser.tabs-top.address-top:has(#panels-container.icons) div.UrlBar.toolbar.toolbar-mainbar.toolbar-large {
   border-left: 1px solid var(--GXborderColor) !important;
 }
 
@@ -6,11 +6,11 @@
   background-color: var(--colorAccentBg);
 }
 
-.mainbar {
+#browser:has(#panels-container.icons) .mainbar {
   margin-left: 40px;
 }
 
-.mainbar::before {
+#browser:has(#panels-container.icons) .mainbar::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
   content: " ";
@@ -217,8 +217,10 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
 .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
   margin-right: 0px;
   height: fit-content;
-  border-left: 1px solid var(--GXborderColor);
   border-right: 5px solid var(--colorAccentBg);
+}
+#browser:has(#panels-container.icons) .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
+  border-left: 1px solid var(--GXborderColor);
 }
 
 .toolbar-mainbar.toolbar-extensions .extensionPopupIcons path {

@@ -3,6 +3,8 @@
   height: 31px;
   box-shadow: none !important;
   border: none !important;
+}
+#browser:has(#panels-container.icons) .bookmark-bar {
   margin-left: 40px;
 }
 
@@ -11,6 +13,8 @@
   padding-inline: 5px;
   padding-block: 3px;
   gap: 0.5rem;
+}
+#browser:has(#panels-container.icons) .bookmark-bar .observer {
   border-left: 1px var(--GXborderColor) solid;
 }
 
@@ -43,7 +47,8 @@
 .address-top .toolbar-mainbar:after {
   height: unset;
 }
-.bookmark-bar.default::before {
+
+#browser:has(#panels-container.icons) .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
   content: " ";
