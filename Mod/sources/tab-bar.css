@@ -614,3 +614,9 @@ svg.svg-tab-stack {
 #browser:not(.transparent-tabbar):not(.maximized):not(.tabs-at-edge) #tabs-tabbar-container[style*="height: 61px;"]::before {
   height: 70px;
 }
+
+/* Allow 2nd level tab row bottom border to go under lock button */
+.subcontainer-lock {
+  position: absolute;
+  right: 0;
+}
