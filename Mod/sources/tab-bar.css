@@ -73,7 +73,7 @@
   width: var(--modLineWidth);
   height: 1px;
   position: absolute;
-  right: calc(calc(var(--modLineWidth) - 2px) * -1);
+  right: calc(calc(var(--modLineWidth) - 1px) * -1);
   bottom: 0px;
 }
 
@@ -105,7 +105,7 @@
 #tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:before {
   content: " ";
   background-color: var(--GXborderColor);
-  width: 100.03vw;
+  width: 100vw;
   height: 1px;
   position: absolute;
   left: -100vw;
