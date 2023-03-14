@@ -620,3 +620,8 @@ svg.svg-tab-stack {
   position: absolute;
   right: 0;
 }
+
+/* Continue border under workspaces button */
+.tabbar-workspace-button {
+  border-bottom: 1px solid var(--GXborderColor);
+}
