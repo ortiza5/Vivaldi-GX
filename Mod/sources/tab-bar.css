@@ -332,12 +332,12 @@
 }
 
 div#tabs-container {
-  margin-left: 40px;
+  margin-left: var(--GXpanelWidth);
   padding-left: 0px !important;
 }
 
 #tabs-tabbar-container {
-  clip-path: polygon(40px 0, 100% 0, 100% 100%, 40px 100%);
+  clip-path: polygon(var(--GXpanelWidth) 0, 100% 0, 100% 100%, var(--GXpanelWidth) 100%);
 }
 
 .tab-position .tab:not(.active):hover::before {
@@ -525,7 +525,7 @@ div#tabs-container {
 }
 
 #tabs-subcontainer {
-  margin-left: 40px !important;
+  margin-left: var(--GXpanelWidth) !important;
   margin-top: -1px !important;
   border-left: 1px solid var(--GXborderColor) !important;
   box-shadow: none !important;

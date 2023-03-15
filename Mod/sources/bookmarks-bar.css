@@ -4,8 +4,8 @@
   box-shadow: none !important;
   border: none !important;
 }
-#browser:has(#panels-container.icons) .bookmark-bar {
-  margin-left: 40px;
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
+  margin-left: var(--GXpanelWidth);
 }
 
 .bookmark-bar .observer {
@@ -14,7 +14,7 @@
   padding-block: 3px;
   gap: 0.5rem;
 }
-#browser:has(#panels-container.icons) .bookmark-bar .observer {
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar .observer {
   border-left: 1px var(--GXborderColor) solid;
 }
 
@@ -48,11 +48,11 @@
   height: unset;
 }
 
-#browser:has(#panels-container.icons) .bookmark-bar.default::before {
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
   content: " ";
-  width: 40px;
+  width: var(--GXpanelWidth);
   height: 29px;
   position: fixed;
   left: 0;

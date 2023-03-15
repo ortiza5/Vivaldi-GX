@@ -5,6 +5,7 @@
   /* set the 2 variables below to "currentColor" to get original look of Opera GX */
   --GXaddressBarButtonFill: var(--GXbuttonFill);
   --GXbookmarkBarButtonFill: var(--GXbuttonFill);
+  --GXpanelWidth: 40px;
   --spnr1: #949499;
   --spnr2: #838489;
   --spnr3: #807f85;

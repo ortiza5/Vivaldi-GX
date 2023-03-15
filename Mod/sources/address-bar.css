@@ -6,15 +6,15 @@
   background-color: var(--colorAccentBg);
 }
 
-#browser:has(#panels-container.icons) .mainbar {
-  margin-left: 40px;
+#browser:has(#panels-container:not([style*="width: 0px;"])) .mainbar {
+  margin-left: var(--GXpanelWidth);
 }
 
-#browser:has(#panels-container.icons) .mainbar::before {
+#browser:has(#panels-container:not([style*="width: 0px;"])) .mainbar::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
   content: " ";
-  width: 40px;
+  width: var(--GXpanelWidth);
   height: 34px;
   position: fixed;
   left: 0;
@@ -219,7 +219,7 @@ path[d="M3 4h10v1H3zM3 6h10v1H3zM3 8h10v1H3zM3 10h6v1H3z"] {
   height: fit-content;
   border-right: 5px solid var(--colorAccentBg);
 }
-#browser:has(#panels-container.icons) .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
+#browser:has(#panels-container:not([style*="width: 0px;"])) .toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-large {
   border-left: 1px solid var(--GXborderColor);
 }
 

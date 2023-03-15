@@ -13,7 +13,6 @@
 }
 
 #panels #switch {
-  margin-left: 3px !important;
   margin-bottom: 0px !important;
   backdrop-filter: none !important;
 }
@@ -47,7 +46,7 @@
 }
 
 #panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
-  min-width: 41px !important;
+  min-width: calc(var(--GXpanelWidth) + 1px) !important;
 }
 
 #browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
@@ -71,11 +70,10 @@
   height: 1px;
   background-color: var(--GXborderColor);
   top: 0;
-  margin-left: 3px;
 }
 
 #panels-container.overlay .panel-group {
-  left: 40px !important;
+  left: var(--GXpanelWidth) !important;
 }
 
 #panels #switch > button:nth-child(4)::before,
@@ -113,14 +111,14 @@
   min-width: 150px !important;
 }
 
-#panels-container.overlay {
-  border-right: none !important;
-  width: 40px !important;
+#panels-container:not([style*="width: 0px;"]) {
+  min-width: var(--GXpanelWidth) !important;
 }
 
-#browser.tabs-off.address-top #panels-container.overlay {
+/* Need to rework */
+/* #browser.tabs-off.address-top #panels-container.overlay {
   border-top: 1px solid var(--colorHighlightBg);
-}
+} */
 
 #panels-container:after {
   background-color: transparent;
@@ -145,6 +143,7 @@
   border-top: 1px solid var(--colorAccentBg);
 }
 
+/* Not sure what it does */
 #browser.tabs-top.address-top #panels-container[style*="width: 0px;"] + #webview-container:before {
   content: " ";
   position: absolute;
@@ -265,4 +264,12 @@
 
 #panels-container {
   box-shadow: none !important;
+}
+
+/* Make panel buttons fill available space */
+#switch {
+  flex: 0 0 var(--GXpanelWidth);
+}
+#switch > * > .button-toolbar {
+  width: var(--GXpanelWidth);
 }
