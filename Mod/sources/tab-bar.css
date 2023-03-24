@@ -5,7 +5,7 @@
   border-bottom-color: var(--GXborderColor);
 }
 
-#tabs-container .tab.active {
+#tabs-container .tab.active:not(.tab-mini) {
   border-width: 1px 1px 0px 1px;
   border-color: var(--GXborderColor);
   border-bottom-color: transparent;
