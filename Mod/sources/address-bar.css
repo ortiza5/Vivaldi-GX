@@ -415,7 +415,7 @@ button.button-on .bookmark-outline {
   background-color: var(--colorAccentBgFadedMore) !important;
   color: var(--colorAccentFg);
   fill: var(--colorAccentFg);
-  margin-top: 3px !important;
+  margin-top: 3px;
   border-left: 2px solid var(--colorAccentBgFadedMost) !important;
   border-bottom: 2px solid var(--colorAccentBgFadedMost) !important;
   border-right: 2px solid var(--colorAccentBgFadedMost) !important;

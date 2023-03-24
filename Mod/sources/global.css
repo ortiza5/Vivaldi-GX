@@ -120,3 +120,13 @@
 .mainbar .button-toolbar > button {
   fill: var(--GXaddressBarButtonFill);
 }
+
+/* Style startpage search box dropdown like address bar dropdown */
+.startpage .OmniDropdown {
+  margin-top: -6px;
+}
+.color-behind-tabs-off .startpage .SearchField:focus-within {
+  outline-offset: -3px;
+  background-color: var(--colorAccentBgFadedMore) !important;
+  color: var(--colorAccentFg);
+}
