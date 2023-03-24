@@ -390,16 +390,16 @@ div#tabs-container {
 }
 
 /* remove gap between tab popup tooltip and tab bar */
-#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 34px;"] {
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 3"] {
   top: 30px !important;
 }
-#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 43px;"] {
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 4"] {
   top: 39px !important;
 }
-#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 65px;"] {
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 6"] {
   top: 61px !important;
 }
-#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 74px;"] {
+#browser.tabs-top > #vivaldi-tooltip .tooltip[style*="top: 7"] {
   top: 70px !important;
 }
 
