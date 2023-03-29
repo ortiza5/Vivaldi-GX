@@ -1,5 +1,5 @@
 .vivaldi svg > path:nth-child(1) {
-  fill: var(--colorHighlightBg) !important;
+  fill: var(--GXbuttonFill) !important;
 }
 
 .vivaldi svg > path:nth-child(2) {
@@ -7,8 +7,7 @@
 }
 
 #titlebar button.vivaldi {
-  margin-left: 3px;
-  margin-top: 3px;
+  width: var(--GXpanelWidth);
 }
 
 .vivaldi span.burger-icon {
@@ -16,7 +15,7 @@
 }
 
 .vivaldi:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
 }
 
 .UrlBar > div:not(.UrlBar-AddressField) .button-popup {
@@ -106,9 +105,28 @@
 }
 
 #browser.win .window-buttongroup {
-  fill: var(--colorHighlightBg);
+  fill: var(--GXbuttonFill);
+  color: var(--GXbuttonFill);
 }
 
 #browser.win .window-buttongroup button:hover:not(.window-close) {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
+}
+
+.button-toolbar > button {
+  fill: var(--GXbuttonFill);
+}
+
+.mainbar .button-toolbar > button {
+  fill: var(--GXaddressBarButtonFill);
+}
+
+/* Style startpage search box dropdown like address bar dropdown */
+.startpage .OmniDropdown {
+  margin-top: -6px;
+}
+.color-behind-tabs-off .startpage .SearchField:focus-within {
+  outline-offset: -3px;
+  background-color: var(--colorAccentBgFadedMore) !important;
+  color: var(--colorAccentFg);
 }

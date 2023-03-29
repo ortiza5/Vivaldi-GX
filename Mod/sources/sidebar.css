@@ -13,8 +13,7 @@
 }
 
 #panels #switch {
-  margin-left: 3px !important;
-  margin-bottom: 40px !important;
+  margin-bottom: 0px !important;
   backdrop-filter: none !important;
 }
 
@@ -46,23 +45,35 @@
   margin-bottom: 12px;
 }
 
-#panels-container:not(.overlay):not([style*="width: 0px;"]) {
-  min-width: 41px !important;
-  border-right: 1px solid var(--colorHighlightBg);
+#panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
+  min-width: calc(var(--GXpanelWidth) + 1px) !important;
 }
 
 #browser:not(.fullscreen) #panels-container:not(.overlay)[style="width: 0px;"] {
   min-width: 0px !important;
 }
 
-#panels-container:not(.overlay) .panel-group {
-  margin-left: 3px !important;
-  border-top: 1px solid var(--colorHighlightBg) !important;
-  border-bottom: none !important;
+#panels-container {
+  --GXborderGradient: linear-gradient(var(--GXborderColor) 25%, var(--colorWindowBg) 85%) 1;
+  border-image: var(--GXborderGradient);
+}
+
+/* wrap border around expanded panels */
+.panel-group {
+  border-image: var(--GXborderGradient);
+}
+.panel-group::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 1px;
+  background-color: var(--GXborderColor);
+  top: 0;
 }
 
 #panels-container.overlay .panel-group {
-  left: 40px !important;
+  left: var(--GXpanelWidth) !important;
 }
 
 #panels #switch > button:nth-child(4)::before,
@@ -100,24 +111,24 @@
   min-width: 150px !important;
 }
 
-#panels-container.overlay {
-  border-right: none !important;
-  width: 40px !important;
+#panels-container:not([style*="width: 0px;"]) {
+  min-width: var(--GXpanelWidth) !important;
 }
 
-#browser.tabs-off.address-top #panels-container.overlay {
+/* Need to rework */
+/* #browser.tabs-off.address-top #panels-container.overlay {
   border-top: 1px solid var(--colorHighlightBg);
-}
+} */
 
 #panels-container:after {
   background-color: transparent;
 }
 
-#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"]) + #webview-container {
+#panels-container:not([style*="width: 0px;"]) + #webview-container {
   border-left: 1px solid var(--colorBg) !important;
 }
 
-#browser:not(.fullscreen) #panels-container:not([style*="width: 0px;"]) + #webview-container:before {
+#panels-container:not([style*="width: 0px;"]) + #webview-container:before {
   content: " ";
   position: absolute;
   height: 100%;
@@ -132,6 +143,7 @@
   border-top: 1px solid var(--colorAccentBg);
 }
 
+/* Not sure what it does */
 #browser.tabs-top.address-top #panels-container[style*="width: 0px;"] + #webview-container:before {
   content: " ";
   position: absolute;
@@ -241,6 +253,10 @@
   border: none !important;
 }
 
+.left.switcher {
+  border: none !important;
+}
+
 #switch .addwebpanel-wrapper > button.active,
 #switch > button.active {
   box-shadow: none !important;
@@ -250,10 +266,10 @@
   box-shadow: none !important;
 }
 
-#panels-container::before {
-  content: " ";
-  backdrop-filter: var(--backgroundBlur);
-  width: 40px;
-  height: 100%;
-  position: fixed;
+/* Make panel buttons fill available space */
+#switch {
+  flex: 0 0 var(--GXpanelWidth);
+}
+#switch > * > .button-toolbar {
+  width: var(--GXpanelWidth);
 }

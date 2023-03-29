@@ -3,8 +3,9 @@
   height: 31px;
   box-shadow: none !important;
   border: none !important;
-  margin-left: 40px;
-  border-left: 1px solid var(--colorHighlightBg) !important;
+}
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
+  margin-left: var(--GXpanelWidth);
 }
 
 .bookmark-bar .observer {
@@ -13,16 +14,18 @@
   padding-block: 3px;
   gap: 0.5rem;
 }
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar .observer {
+  border-left: 1px var(--GXborderColor) solid;
+}
+
+/* Bookmark text expansion control */
+.BookmarkButton BookmarkButton--Active {
+  width: auto !important;
+}
 
 .bookmarkbarItem {
   border-radius: 0px !important;
   padding: 0px 5px !important;
-}
-
-.bookmark-bar button svg.folder-icon {
-  stroke: var(--colorFg) !important;
-  height: 16px;
-  width: 16px;
 }
 
 .bookmark-bar button {
@@ -38,19 +41,33 @@
 }
 
 .bookmarkbarItem:hover {
-  background-color: var(--WButtonHoverBg) !important;
+  background-color: var(--GXbuttonBgHover) !important;
 }
 
 .address-top .toolbar-mainbar:after {
   height: unset;
 }
-.bookmark-bar.default::before {
+
+#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar.default::before {
   background-color: var(--colorBgAlphaBlur);
   backdrop-filter: var(--backgroundBlur);
-  /*content         : " ";*/
-  width: 40px;
-  height: 31px;
+  content: " ";
+  width: var(--GXpanelWidth);
+  height: 29px;
   position: fixed;
   left: 0;
   z-index: 0;
+}
+
+.bookmark-bar button {
+  color: var(--GXbookmarkBarButtonFill);
+}
+
+.bookmark-bar button svg {
+  fill: var(--GXbookmarkBarButtonFill);
+}
+
+/* make folders follow other fill */
+svg.folder-icon .fill-override.fill-override.fill-override.fill-override > svg {
+  fill: var(--GXbookmarkBarButtonFill);
 }
