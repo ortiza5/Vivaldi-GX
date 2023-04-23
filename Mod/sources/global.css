@@ -114,11 +114,11 @@
 }
 
 .button-toolbar > button {
-  fill: var(--GXbuttonFill);
+  color: var(--GXbuttonFill);
 }
 
 .mainbar .button-toolbar > button {
-  fill: var(--GXaddressBarButtonFill);
+  color: var(--GXaddressBarButtonFill);
 }
 
 /* Style startpage search box dropdown like address bar dropdown */

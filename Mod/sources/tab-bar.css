@@ -447,7 +447,7 @@ div#tabs-container {
 }
 
 .toolbar-tabbar.sync-and-trash-container button svg {
-  fill: var(--GXbuttonFill);
+  color: var(--GXbuttonFill);
 }
 
 .toolbar-tabbar.sync-and-trash-container button {
