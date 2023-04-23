@@ -625,6 +625,11 @@ svg.svg-tab-stack {
 .tabbar-workspace-button {
   border-bottom: 1px solid var(--GXborderColor);
 }
-.button-toolbar.workspace-popup.tabbar-workspace-button button {
+.button-toolbar.workspace-popup.tabbar-workspace-button {
   height: 29px;
+}
+
+/* Temp fix for gap between borders under tabs and workspaces button */
+#tabs-container .resize {
+  margin-left: -1px;
 }
