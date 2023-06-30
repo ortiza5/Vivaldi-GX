@@ -677,3 +677,8 @@ progress.pageload-indicator {
 .UrlBar-AddressField .BookmarkButton {
   border-radius: 0px !important;
 }
+
+/* Remove border under address bar */
+.address-top .mainbar > .toolbar-mainbar {
+  border-bottom: unset;
+}
