@@ -63,10 +63,10 @@
   fill: var(--colorHighlightFgDark);
 }
 
-#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:2;"]:after,
-#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:3;"]:after,
-#tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:after,
-#tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:after {
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex: 2;"]:after,
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex: 3;"]:after,
+#tabs-subcontainer .tab-position[style*="--ZIndex: 2;"]:after,
+#tabs-subcontainer .tab-position[style*="--ZIndex: 3;"]:after {
   --modLineWidth: 25vw;
   content: " ";
   background-image: linear-gradient(to right, var(--GXborderColor), transparent);
@@ -77,32 +77,32 @@
   bottom: 0px;
 }
 
-.tab-strip > span:nth-child(1) > .tab-position[style*="--ZIndex:2;"]:after,
-.tab-strip > span:nth-child(1) > .tab-position[style*="--ZIndex:3;"]:after,
-.tab-strip > span:nth-child(2) > .tab-position[style*="--ZIndex:2;"]:after,
-.tab-strip > span:nth-child(2) > .tab-position[style*="--ZIndex:3;"]:after {
+.tab-strip > span:nth-child(1) > .tab-position[style*="--ZIndex: 2;"]:after,
+.tab-strip > span:nth-child(1) > .tab-position[style*="--ZIndex: 3;"]:after,
+.tab-strip > span:nth-child(2) > .tab-position[style*="--ZIndex: 2;"]:after,
+.tab-strip > span:nth-child(2) > .tab-position[style*="--ZIndex: 3;"]:after {
   --modLineWidth: 50vw !important;
 }
 
-.tab-strip > span:nth-child(3) > .tab-position[style*="--ZIndex:2;"]:after,
-.tab-strip > span:nth-child(3) > .tab-position[style*="--ZIndex:3;"]:after {
+.tab-strip > span:nth-child(3) > .tab-position[style*="--ZIndex: 2;"]:after,
+.tab-strip > span:nth-child(3) > .tab-position[style*="--ZIndex: 3;"]:after {
   --modLineWidth: 40vw !important;
 }
 
-.tab-strip > span:nth-child(4) > .tab-position[style*="--ZIndex:2;"]:after,
-.tab-strip > span:nth-child(4) > .tab-position[style*="--ZIndex:3;"]:after {
+.tab-strip > span:nth-child(4) > .tab-position[style*="--ZIndex: 2;"]:after,
+.tab-strip > span:nth-child(4) > .tab-position[style*="--ZIndex: 3;"]:after {
   --modLineWidth: 35vw !important;
 }
 
-.tab-strip > span:nth-child(5) > .tab-position[style*="--ZIndex:2;"]:after,
-.tab-strip > span:nth-child(5) > .tab-position[style*="--ZIndex:3;"]:after {
+.tab-strip > span:nth-child(5) > .tab-position[style*="--ZIndex: 2;"]:after,
+.tab-strip > span:nth-child(5) > .tab-position[style*="--ZIndex: 3;"]:after {
   --modLineWidth: 30vw !important;
 }
 
-#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:2;"]:before,
-#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex:3;"]:before,
-#tabs-subcontainer .tab-position[style*="--ZIndex:2;"]:before,
-#tabs-subcontainer .tab-position[style*="--ZIndex:3;"]:before {
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex: 2;"]:before,
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position[style*="--ZIndex: 3;"]:before,
+#tabs-subcontainer .tab-position[style*="--ZIndex: 2;"]:before,
+#tabs-subcontainer .tab-position[style*="--ZIndex: 3;"]:before {
   content: " ";
   background-color: var(--GXborderColor);
   width: 100vw;
@@ -112,7 +112,7 @@
   bottom: 0px;
 }
 
-.tab-position[style*="--ZIndex:3;"] {
+.tab-position[style*="--ZIndex: 3;"] {
   filter: brightness(1) contrast(1) opacity(1) !important;
 }
 
