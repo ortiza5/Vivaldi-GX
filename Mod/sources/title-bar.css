@@ -1,3 +1,4 @@
+/* Remove border under the header when the address bar isn't on top */
 #browser:not(.address-top) > #header {
   box-shadow: none !important;
 }
