@@ -1,0 +1,58 @@
+/* Set the panel bar width */
+#panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
+  min-width: calc(var(--GXpanelWidth) + 1px) !important;
+}
+#panels-container:not([style*="width: 0px;"]) {
+  min-width: var(--GXpanelWidth) !important;
+}
+/* Move panel pane over to accomidate new width when set to floating */
+#panels-container.overlay .panel-group {
+  left: var(--GXpanelWidth) !important;
+}
+
+/* Make panel buttons fill available space */
+#switch {
+  flex: 0 0 var(--GXpanelWidth);
+  max-width: 100%;
+}
+#switch > * > .button-toolbar {
+  width: var(--GXpanelWidth);
+}
+
+/* Keep the side border indicator for active panel button while hovered */
+#switch .button-toolbar.active:has(> button:hover) {
+  background-color: var(--GXbuttonBgHover);
+}
+#switch .button-toolbar.active > button:hover {
+  background-color: transparent !important;
+}
+
+/* Add gradient border along side of panels */
+#panels-container {
+  --GXborderGradient: linear-gradient(var(--GXborderColor) 25%, var(--colorWindowBg) 85%) 1;
+  border-image: var(--GXborderGradient);
+}
+
+/* Wrap border around expanded panels */
+.panel-group {
+  border-image: var(--GXborderGradient);
+}
+.panel-group::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 1px;
+  background-color: var(--GXborderColor);
+  top: 0;
+}
+
+/* Add slight margin at the bottom of the panel bar */
+#panels #switch {
+  margin-bottom: 12px;
+}
+
+/* Need to rework */
+/* #browser.tabs-off.address-top #panels-container.overlay {
+  border-top: 1px solid var(--colorHighlightBg);
+} */
