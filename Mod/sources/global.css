@@ -118,7 +118,7 @@
 }
 
 .mainbar .button-toolbar > button {
-  color: var(--GXaddressBarButtonFill);
+  color: var(--GXaddressBarButtonFill) !important;
 }
 
 /* Style startpage search box dropdown like address bar dropdown */
