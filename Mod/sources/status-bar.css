@@ -64,3 +64,8 @@ button.ClockPopup-Preset:hover + button.ClockPopup-Preset-Clear {
 .toolbar-statusbar .page-zoom-controls button:disabled > .button-title {
   color: var(--GXbuttonFill) !important;
 }
+
+/* Fix status bar gradient being covered */
+footer::after {
+  content: unset !important;
+}
