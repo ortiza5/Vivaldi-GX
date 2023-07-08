@@ -1,21 +1,11 @@
 #browser {
-  --GXbuttonFill: var(--colorHighlightBgDark);
-  --GXbuttonBgHover: var(--colorAccentBgFaded);
-  --GXborderColor: var(--GXbuttonFill);
-  /* set the 2 variables below to "currentColor" to get original look of Opera GX */
+  --GXbuttonFill: var(--colorHighlightBg);
+  --GXbuttonBgHover: var(--colorAccentBgDark);
+  --GXborderColor: var(--colorHighlightBgDark);
+  --GXpanelWidth: 40px;
+  --GXaddressFieldSideBorders: "⋮";
+  /* Set the 2 variables below to "var(--colorAccentFg)" to get the original look of Opera GX */
+  /* By default, "var(--GXbuttonFill)", the buttons will match the rest of the UI */
   --GXaddressBarButtonFill: var(--GXbuttonFill);
   --GXbookmarkBarButtonFill: var(--GXbuttonFill);
-  --GXpanelWidth: 40px;
-  --spnr1: #949499;
-  --spnr2: #838489;
-  --spnr3: #807f85;
-  --spnr4: #67666c;
-  --spnr5: #54535a;
-  --spnr6: #3d3a43;
-  --spnr7: #2d2b33;
-  --spnr8: #221f28;
-  --checkboxAnimation: 0.18s cubic-bezier(0.26, -0.21, 0.79, 1.22);
-  --verticalEllipsis: "⋮";
-  --transitionTabBarGradient: 53px;
-  --transitionTabBarGradientB: 200px;
 }

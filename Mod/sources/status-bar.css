@@ -1,10 +1,9 @@
-.toolbar-statusbar {
-  background-color: var(--colorBg) !important;
-  box-shadow: none !important;
-  border-bottom: none !important;
-  padding: 0px 2px !important;
+/* Hide default status bar border */
+footer:has(.toolbar-statusbar)::after {
+  content: unset !important;
 }
 
+/* Gradient border above status bar */
 .toolbar-statusbar:before {
   content: " ";
   position: absolute;
@@ -13,59 +12,55 @@
   width: 100%;
   height: 1px;
   background-image: linear-gradient(to right, transparent 40px, var(--GXborderColor) 50vw, transparent 100vw);
+  z-index: 1;
 }
 
-.toolbar-statusbar > div > button,
-.toolbar-statusbar .page-zoom-controls .button-toolbar svg {
-  fill: var(--GXbuttonFill);
+/* Make zoom buttons match other button colors */
+.page-zoom-controls {
   color: var(--GXbuttonFill);
 }
-
-.toolbar-statusbar input[type="range"] {
+/* Stylize zoom controls */
+.page-zoom-controls input[type="range"] {
   background-color: var(--GXbuttonFill) !important;
   height: 2px;
-  box-shadow: none !important;
 }
-
-.toolbar-statusbar input[type="range"]::-webkit-slider-thumb {
-  background: var(--colorBg) !important;
+.page-zoom-controls input[type="range"]::-webkit-slider-thumb {
   border-color: var(--GXbuttonFill);
   width: 10px;
   height: 10px;
   transform: rotateZ(45deg);
-  border-radius: 0px !important;
-  box-shadow: none !important;
 }
 
-.toolbar-statusbar .button-toolbar > button.button-pressed {
-  background-color: transparent;
-}
-
+/* Make active Break Mode button distinct from other buttons color */
 .toolbar > .button-toolbar > .button-on.button-on,
 .toolbar > .toolbar-group .button-toolbar > .button-on.button-on {
-  fill: var(--colorFg) !important;
-  color: var(--colorFg) !important;
+  fill: var(--colorFg);
+  color: var(--colorFg);
 }
 
-.toolbar-statusbar .button-toolbar button:hover,
-button.ClockPopup-Preset:hover + button.ClockPopup-Preset-Clear {
-  background-color: hsl(0 0% 100% / 0.05) !important;
+/* Align statusbar button icon with panel icons */
+.toolbar-statusbar {
+  --statusBarButtonWidth: 34px;
+  padding: 0 calc((var(--GXpanelWidth) - var(--statusBarButtonWidth)) / 2);
 }
 
-.toolbar-statusbar .page-zoom-controls,
-.toolbar-statusbar .page-zoom-controls .zoom-percent {
-  color: var(--GXbuttonFill) !important;
+/* Blend Status Bar with other transparent UI */
+/* replaces background with pseudo element with variable left/right margin, so the backgrounds don't overlap */
+footer:has(.toolbar-statusbar) {
+  backdrop-filter: unset !important;
+  background-color: unset !important;
 }
-
-.toolbar-statusbar .page-zoom-controls .button-title {
-  color: var(--GXbuttonFill) !important;
+footer:has(.toolbar-statusbar)::before {
+  content: "";
+  position: absolute;
+  left: var(--arePanelsSetToRight, var(--GXpanelWidth));
+  right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--backgroundBlur);
+  background-color: var(--colorBgAlphaBlur) !important;
 }
-
-.toolbar-statusbar .page-zoom-controls button:disabled > .button-title {
-  color: var(--GXbuttonFill) !important;
-}
-
-/* Fix status bar gradient being covered */
-footer::after {
-  content: unset !important;
+#browser:has(#panels-container[style*="width: 0px;"]) footer:has(.toolbar-statusbar)::before {
+  left: var(--arePanelsSetToRight, 0);
+  right: var(--arePanelsSetToLeft, 0);
 }

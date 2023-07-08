@@ -1,79 +1,57 @@
-#modal-bg,
-#modal-bg > div,
-.quick-command-container .quick-commands {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-#modal-bg,
-#modal-bg > div,
-.quick-command-container .qc-entry {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-#modal-bg > div {
-  background-color: var(--colorAccentBgFadedMore);
-}
-
+/* 
+.quick-command-container .qc-entry,
 .quick-command-container .quick-commands {
   background-color: var(--colorAccentBgFadedMore);
+} */
+
+/* Give the window a border and give the header a gradient background */
+#modal-bg.qc-modal .modal-wrapper {
+  border: 1px solid var(--GXborderColor);
+  background-image: linear-gradient(45deg, var(--colorHighlightBg), transparent);
 }
 
-.quick-commands {
-  --modQCHeight: calc(280px + 8px);
-  height: var(--modQCHeight) !important;
-  max-height: var(--modQCHeight) !important;
-}
-
+/* Hide separator between header and results */
 .qc-entry > input {
   border-bottom: none !important;
 }
 
-.quick-command-search-hint {
-  background-color: var(--colorAccentBgFadedMore);
-  opacity: 1 !important;
-  color: var(--colorFgFadedMore);
-}
-
-span.view.quick-command-url {
+/* Set the font color for the results */
+.quick-command-container .quick-commands .quick-command .quick-command-title {
   color: var(--colorHighlightBgDark);
 }
-
-.quick-command-container .quick-commands .quick-command[data-selected] .quick-command-url {
+.quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
   color: var(--colorHighlightFg);
-  opacity: 1 !important;
 }
-
-.isblurred .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-url {
+.isblurred .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
   color: var(--colorFg);
 }
 
+/* Give favicon or results a background when hovered/selected */
 .quick-command[data-selected] img + span::before {
-  content: " ";
-  background-color: var(--colorAccentBgFadedMore);
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  left: 7.5px;
+  content: "";
   position: absolute;
-  z-index: 0;
+  left: 32px;
   top: 2px;
+  height: 24px;
+  width: 24px;
+  background-color: var(--colorAccentBgFadedMore);
+  border-radius: 100%;
+  z-index: 0;
 }
-
 img.quick-command-favicon {
   z-index: 1;
 }
 
+/* Make the window wider */
 .quick-command-container,
 .quick-commands > div {
   width: 50vw !important;
 }
-
 .quick-commands > div > div {
   max-width: 50vw !important;
 }
 
+/* Set the result's background color for hovered/selected */
 .quick-command-container .quick-commands .quick-command[data-selected] {
   background-color: var(--colorHighlightBgAlpha) !important;
 }

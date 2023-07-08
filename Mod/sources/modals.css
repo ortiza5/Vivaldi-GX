@@ -1,32 +1,96 @@
-.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary),
+/* Stylize popup dialogs */
+.button-popup:not(:has(.SearchField)),
+.BookmarkPopup,
+.account-dialog,
+.ControlPanel {
+  background-color: var(--colorAccentBgDark);
+  color: var(--colorAccentFg);
+}
+.button-popup:not(:has(.SearchField)) header,
+.button-popup:not(:has(.SearchField)) footer,
+.BookmarkPopup .dialog-header,
+.BookmarkPopup .dialog-footer,
+.ClockPopup-Header,
+.ClockPopup .toolbar,
+.ClockPopup-Alarms,
+.ClockPopup-Countdowns,
+.button-popup:not(:has(.SearchField)).ToolbarButtonPopup-DefaultStyles h2,
+.button-popup:not(:has(.SearchField)).ToolbarButtonPopup-DefaultStyles footer {
+  background: var(--colorAccentBgDarker);
+}
+/* removes vertical border in screen capture popup */
+.ControlPanel-ModeSelector::after {
+  content: unset;
+}
+/* QR code dialog can be too tall for complex URLs */
+.button-popup:not(:has(.SearchField)) {
+  max-height: 70vh;
+}
+
+/* Buttons */
+.button-popup:not(:has(.SearchField)) input,
+.button-popup:not(:has(.SearchField)) button,
+.button-popup:not(:has(.SearchField)) textarea {
+  background-color: var(--colorAccentBgDarker) !important;
+  border-color: var(--colorAccentBg) !important;
+  color: var(--colorAccentFgFaded) !important;
+}
+/* Clock up/down arrows are drawn with a background image */
+.button-popup:not(:has(.SearchField)) input,
+.button-popup:not(:has(.SearchField)) button:not(.ClockPopup-Spinner--up):not(.ClockPopup-Spinner--down),
+.button-popup:not(:has(.SearchField)) textarea {
+  background-image: unset !important;
+}
+.ClockPopup-Spinner--up {
+  background-image: linear-gradient(55deg, transparent 53%, var(--colorAccentBgDarker) 55%), linear-gradient(125deg, var(--colorAccentBgDarker) 43%, transparent 45%),
+    linear-gradient(var(--colorAccentFgFaded) 70%, var(--colorAccentBgDarker) 70%);
+}
+.ClockPopup-Spinner--down {
+  background-image: linear-gradient(55deg, var(--colorAccentBgDarker) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorAccentBgDarker) 55%),
+    linear-gradient(180deg, var(--colorAccentBgDarker) 30%, var(--colorAccentFgFaded) 30%);
+}
+/* Let submit buttons be more colorful */
+.button-popup:not(:has(.SearchField)) input[type="submit"],
 #modal-bg input[type="submit"] {
-  background-color: var(--colorHighlightBg) !important;
-  background-image: none !important;
-  border: 1px solid var(--colorHighlightBgDark) !important;
-  color: var(--colorHighlightFg) !important;
-  border-radius: 3px !important;
+  background-image: unset !important;
+  color: var(--colorHighlightBg) !important;
+  border-color: var(--colorHighlightBgDark) !important;
 }
 
-.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"]:not(.primary):hover,
-#modal-bg input[type="submit"]:hover {
-  background-image: linear-gradient(0deg, rgb(0 0 0 / 0.15), hsl(0 0% 0% / 0.15)) !important;
+/* Make the bookmark details blend with background */
+.button-popup:not(:has(.SearchField)) .BookmarkInputField input {
+  background-color: unset !important;
 }
 
-.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary,
-#modal-bg input[type="button"] {
-  background-color: var(--colorAccentBgDark) !important;
-  background-image: none !important;
-  border: 1px solid var(--colorAccentBgFadedMost) !important;
-  color: var(--colorAccentFg) !important;
-  border-radius: 3px !important;
-}
-
-.button-popup-wrapper .UrlBar-AddressField-popup-content input[type="button"].primary:hover,
-#modal-bg input[type="button"]:hover {
+/* Hovered Buttons */
+.button-popup:not(:has(.SearchField)) input:hover,
+.button-popup:not(:has(.SearchField)) button:hover,
+.button-popup:not(:has(.SearchField)) textarea:hover {
   background-color: var(--colorAccentBg) !important;
+  color: var(--colorAccentFg) !important;
+}
+.ClockPopup-Spinner--up:hover {
+  background-image: linear-gradient(55deg, transparent 53%, var(--colorAccentBg) 55%), linear-gradient(125deg, var(--colorAccentBg) 43%, transparent 45%),
+    linear-gradient(var(--colorAccentFg) 70%, var(--colorAccentBg) 70%);
+}
+.ClockPopup-Spinner--down:hover {
+  background-image: linear-gradient(55deg, var(--colorAccentBg) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorAccentBg) 55%),
+    linear-gradient(180deg, var(--colorAccentBg) 30%, var(--colorAccentFg) 30%);
 }
 
-.button-popup-wrapper .UrlBar-AddressField-popup-content section,
-#modal-bg .dialog-footer {
-  text-align: right;
+/* Buttons with focus */
+.button-popup:not(:has(.SearchField)) input:focus-within,
+.button-popup:not(:has(.SearchField)) button:focus-within,
+.button-popup:not(:has(.SearchField)) textarea:focus-within {
+  background-color: var(--colorAccentBgDark) !important;
+  color: var(--colorAccentFg) !important;
+  box-shadow: 0 0 0 1px var(--colorAccentBg) !important;
+}
+.ClockPopup-Spinner--up:focus-within {
+  background-image: linear-gradient(55deg, transparent 53%, var(--colorAccentBgDark) 55%), linear-gradient(125deg, var(--colorAccentBgDark) 43%, transparent 45%),
+    linear-gradient(var(--colorAccentFg) 70%, var(--colorAccentBgDark) 70%);
+}
+.ClockPopup-Spinner--down:focus-within {
+  background-image: linear-gradient(55deg, var(--colorAccentBgDark) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorAccentBgDark) 55%),
+    linear-gradient(180deg, var(--colorAccentBgDark) 30%, var(--colorAccentFg) 30%);
 }
