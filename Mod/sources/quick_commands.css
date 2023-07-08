@@ -1,0 +1,57 @@
+/* 
+.quick-command-container .qc-entry,
+.quick-command-container .quick-commands {
+  background-color: var(--colorAccentBgFadedMore);
+} */
+
+/* Give the window a border and give the header a gradient background */
+#modal-bg.qc-modal .modal-wrapper {
+  border: 1px solid var(--GXborderColor);
+  background-image: linear-gradient(45deg, var(--colorHighlightBg), transparent);
+}
+
+/* Hide separator between header and results */
+.qc-entry > input {
+  border-bottom: none !important;
+}
+
+/* Set the font color for the results */
+.quick-command-container .quick-commands .quick-command .quick-command-title {
+  color: var(--colorHighlightBgDark);
+}
+.quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
+  color: var(--colorHighlightFg);
+}
+.isblurred .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
+  color: var(--colorFg);
+}
+
+/* Give favicon or results a background when hovered/selected */
+.quick-command[data-selected] img + span::before {
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: 2px;
+  height: 24px;
+  width: 24px;
+  background-color: var(--colorAccentBgFadedMore);
+  border-radius: 100%;
+  z-index: 0;
+}
+img.quick-command-favicon {
+  z-index: 1;
+}
+
+/* Make the window wider */
+.quick-command-container,
+.quick-commands > div {
+  width: 50vw !important;
+}
+.quick-commands > div > div {
+  max-width: 50vw !important;
+}
+
+/* Set the result's background color for hovered/selected */
+.quick-command-container .quick-commands .quick-command[data-selected] {
+  background-color: var(--colorHighlightBgAlpha) !important;
+}

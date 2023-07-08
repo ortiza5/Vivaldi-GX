@@ -1,73 +1,55 @@
+/* Remove border */
 .bookmark-bar {
-  background-color: var(--colorAccentBg);
-  height: 31px;
-  box-shadow: none !important;
-  border: none !important;
+  border: unset;
 }
+
+/* Leave space for continued panel bar when it is shown */
 #browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
-  margin-left: var(--GXpanelWidth);
+  margin-left: calc(var(--arePanelsSetToLeft, 0) * var(--GXpanelWidth));
+  margin-right: calc(var(--arePanelsSetToRight, 0) * var(--GXpanelWidth));
 }
 
-.bookmark-bar .observer {
-  align-items: center;
-  padding-inline: 5px;
-  padding-block: 3px;
-  gap: 0.5rem;
-}
-#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar .observer {
-  border-left: 1px var(--GXborderColor) solid;
+/* Border next to continued panel bar if the bookmark bar is set to the top */
+#browser.bookmark-bar-top:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
+  border-left: var(--arePanelsSetToRight, 1px solid var(--GXborderColor)) !important;
+  border-right: var(--arePanelsSetToLeft, 1px solid var(--GXborderColor)) !important;
 }
 
-/* Bookmark text expansion control */
-.BookmarkButton BookmarkButton--Active {
-  width: auto !important;
-}
-
-.bookmarkbarItem {
-  border-radius: 0px !important;
-  padding: 0px 5px !important;
-}
-
+/* Stylize the buttons */
 .bookmark-bar button {
-  /*background-color: var(--colorAccentBg) !important;*/
-  height: 100% !important;
+  border-radius: var(--radius);
+  padding: 0px 5px;
   cursor: pointer;
-  padding-inline: 5px !important;
-  border-radius: 5px !important;
 }
-
+/* used for padding next to favicon */
 .bookmark-bar button:not(.chevron):before {
   content: unset;
 }
 
+/* Space out the bookmarks a bit more */
+.bookmark-bar .observer {
+  padding-inline: 5px;
+}
+.bookmark-bar button:not(.chevron) {
+  margin-left: 2px;
+}
+/* Bring the more bookmarks chevron button out of flow so it doesn't get pushed off edge of screen */
+.bookmark-bar button.chevron {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent, var(--colorAccentBg) 20%);
+  background-color: unset !important;
+}
+.color-behind-tabs-on .bookmark-bar button.chevron {
+  background-image: linear-gradient(to right, transparent, var(--colorBg) 20%);
+}
+.bookmark-bar button.chevron:hover {
+  background-color: unset !important;
+  background-image: linear-gradient(to right, transparent, var(--GXbuttonBgHover) 20%);
+}
+
+/* Change the hover affect to match other buttons */
 .bookmarkbarItem:hover {
   background-color: var(--GXbuttonBgHover) !important;
-}
-
-.address-top .toolbar-mainbar:after {
-  height: unset;
-}
-
-#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar.default::before {
-  background-color: var(--colorBgAlphaBlur);
-  backdrop-filter: var(--backgroundBlur);
-  content: " ";
-  width: var(--GXpanelWidth);
-  height: 29px;
-  position: fixed;
-  left: 0;
-  z-index: 0;
-}
-
-.bookmark-bar button {
-  color: var(--GXbookmarkBarButtonFill);
-}
-
-.bookmark-bar button svg {
-  fill: var(--GXbookmarkBarButtonFill);
-}
-
-/* make folders follow other fill */
-svg.folder-icon .fill-override.fill-override.fill-override.fill-override > svg {
-  fill: var(--GXbookmarkBarButtonFill);
 }

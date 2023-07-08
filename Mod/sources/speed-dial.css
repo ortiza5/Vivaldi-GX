@@ -1,36 +1,71 @@
-.dials.speeddial .thumbnail-image {
-  box-shadow: none !important;
+/* Style startpage search box dropdown like address bar dropdown */
+.SpeedDialView-SearchField .OmniDropdwon {
+  top: 26px;
+}
+.SpeedDialView-SearchField nav.menu {
+  top: 32px !important;
+}
+.startpage .SearchField:focus-within {
+  outline-offset: -3px;
+  background-color: var(--colorAccentBgFadedMore) !important;
+  color: var(--colorAccentFg);
 }
 
-.thumbnail-image svg .folder-tab-color {
-  fill: transparent !important;
+/* Stylize starpage navigation buttons */
+.startpage-navigation .button-toolbar button {
+  padding-right: 6px;
+}
+/* Hide fade on right of buttons */
+.button-startpage {
+  -webkit-mask-image: unset;
+}
+.button-startpage.button-toolbar {
+  padding-right: 3px;
+}
+.startpage .button-toolbar > button:hover {
+  background-color: unset !important;
+}
+.startpage .startpage-navigation .startpage-navigation-group .button-startpage:hover {
+  border-bottom: 2px solid var(--GXbuttonFill);
 }
 
-.thumbnail-image .folderoutline {
-  display: none !important;
+.speeddial .dial {
+  box-shadow: unset;
 }
 
-.dials.speeddial div.dial.folder:not(:focus) {
+/* Cut folder corners */
+.dials.speeddial div.dial.folder {
   --modClipPath1: 12%;
   --modClipPath2: 88%;
   clip-path: polygon(var(--modClipPath1) 0, 100% 0, 100% var(--modClipPath2), var(--modClipPath2) 100%, 0 100%, 0 var(--modClipPath1));
 }
-
-.dials.speeddial .dial.folder .thumbnail-image {
-  border-bottom-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
+/* Give consistent border along cut corners */
+.dials.speeddial div.dial.folder .Mini-Thumbnail:first-of-type {
+  clip-path: polygon(22.3% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
 }
-
+.dials.speeddial div.dial.folder .thumbnail-title {
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 79% 100%, 0 100%);
+}
+/* Prevent title from going into cut area */
+.dials.speeddial div.dial.folder .thumbnail-title button {
+  padding-right: 14px;
+}
+/* Fill top left corner for focus indicator */
+.dials.speeddial .dial:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0);
+}
+/* Folder needs border for bottom right cut corner */
+.dials.speeddial .dial.folder:focus::before {
+  background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0, transparent 93.5%, var(--colorHighlightBg) 0);
+}
 .dials .dial .button-title {
-  background-color: transparent !important;
   color: var(--colorFgIntense);
-  box-shadow: none !important;
 }
-
 .dials .dial:focus-within .editable-title-container .button-title {
   color: var(--colorFgIntense) !important;
-}
-
-.dials .dial.folder:focus {
-  background-image: linear-gradient(-45deg, var(--colorHighlightBg) 7%, transparent 8%, transparent 92%, var(--colorHighlightBg) 93%);
 }

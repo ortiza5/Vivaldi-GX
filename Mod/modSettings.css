@@ -1,25 +1,37 @@
-/*
-    Welcome, this file contains many stuff that you can toggle on/off
-*/
+/* =============================================================================
+  Vivaldi GX - an Opera GX Style Skin for Vivaldi - modified/updated by @nomadic
+  - originally by @gabevilela with help from @tam710562
+  - forum link (original): https://forum.vivaldi.net/post/315382
+  - forum link (new):
+  - last tested with version 6.1.3035.111
+  ============================================================================== */
 
-/* This one is essential, don"t remove it */
+/*
+  This file contains the various parts of the mod that you can toggle ON/OFF
+    - use comment markers, like around this message, to
+      toggle the different parts
+*/
+/* TURNED OFF example: > @import "example.css"; < */
+
+/* Required */
+/* These are required for all the other options, don't remove them */
+/* You can go to the "vars.css" file to edit some of the skin's parameters */
 @import "sources/vars.css";
 @import "sources/global.css";
-/* --- */
-/* These apply to UI compoments
-Removing one of those will remove every mod stylezation in that compoment*/
+
+/* UI compoments */
+/* Removing one of these will remove the aspects related to that compoment */
 @import "sources/address-bar.css";
 @import "sources/bookmarks-bar.css";
-@import "sources/tab-bar.css";
-@import "sources/status-bar.css";
-@import "sources/panel-bar.css";
-@import "sources/speed-dial.css";
-@import "sources/quick_commands.css";
 @import "sources/modals.css";
+@import "sources/panel-bar.css";
+@import "sources/quick_commands.css";
+@import "sources/speed-dial.css";
+@import "sources/status-bar.css";
+@import "sources/tab-bar.css";
 @import "sources/title-bar.css";
 
-/* Snippets
-Those are additional stuff that can be switched ON/OFF without harm*/
+/* Snippets */
+/* These are additional parts that can be switched ON/OFF without harm */
 @import "snippets/hibernated_tabs_indicator.css";
 @import "snippets/ominibox_rounded_favicons.css";
-/*TURNED OFF > @import "snippets/ominibox_rounded_favicons.css"; <*/

@@ -1,5 +1,5 @@
 /* Hide default status bar border */
-footer::after {
+footer:has(.toolbar-statusbar)::after {
   content: unset !important;
 }
 
@@ -42,4 +42,25 @@ footer::after {
 .toolbar-statusbar {
   --statusBarButtonWidth: 34px;
   padding: 0 calc((var(--GXpanelWidth) - var(--statusBarButtonWidth)) / 2);
+}
+
+/* Blend Status Bar with other transparent UI */
+/* replaces background with pseudo element with variable left/right margin, so the backgrounds don't overlap */
+footer:has(.toolbar-statusbar) {
+  backdrop-filter: unset !important;
+  background-color: unset !important;
+}
+footer:has(.toolbar-statusbar)::before {
+  content: "";
+  position: absolute;
+  left: var(--arePanelsSetToRight, var(--GXpanelWidth));
+  right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
+  width: 100%;
+  height: 100%;
+  backdrop-filter: var(--backgroundBlur);
+  background-color: var(--colorBgAlphaBlur) !important;
+}
+#browser:has(#panels-container[style*="width: 0px;"]) footer:has(.toolbar-statusbar)::before {
+  left: var(--arePanelsSetToRight, 0);
+  right: var(--arePanelsSetToLeft, 0);
 }

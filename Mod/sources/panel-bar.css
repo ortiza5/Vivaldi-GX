@@ -52,7 +52,23 @@
   margin-bottom: 12px;
 }
 
-/* Need to rework */
-/* #browser.tabs-off.address-top #panels-container.overlay {
-  border-top: 1px solid var(--colorHighlightBg);
-} */
+/* Hide background to allow replacement background to show */
+#panels-container {
+  background-color: transparent;
+}
+/* Re-add the background to the expanded panel */
+.panel-group {
+  background-color: var(--colorBgAlphaBlur);
+}
+
+/* Hide default background of buttons on hovered panel buttons */
+#switch .addwebpanel-wrapper > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch > * > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):hover,
+#switch .addwebpanel-wrapper > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active,
+#switch > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active,
+#switch > * > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active,
+#switch > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active {
+  background-color: unset;
+}
