@@ -363,27 +363,8 @@ progress.pageload-indicator {
 }
 
 /* Fix gaps between dropdowns and fields when corner rounding is set high */
-.SearchField:has(.OmniDropdown)::before,
-.UrlBar-AddressField:has(.OmniDropdown) .toolbar-insideinput:first-of-type::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 0;
-  width: calc(100% - 3px);
-  height: 10px;
-  background-color: var(--colorAccentBgFadedMore);
-  border-left: 2px solid var(--colorAccentBgFadedMost);
-  border-right: 2px solid var(--colorAccentBgFadedMost);
-}
-.color-behind-tabs-on .SearchField:has(.OmniDropdown)::before,
-.color-behind-tabs-on .UrlBar-AddressField:has(.OmniDropdown) .toolbar-insideinput:first-of-type::before {
-  border-color: var(--colorHighlightBg);
-}
-.startpage .SearchField:has(.OmniDropdown)::before,
-.button-popup .SearchField:has(.OmniDropdown)::before {
-  width: calc(100% - 3.5px);
-}
-.searchfield-input,
-.UrlBar-AddressField::before {
-  z-index: 1;
+.SearchField:has(.OmniDropdown),
+.UrlBar-AddressField:has(.OmniDropdown) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
