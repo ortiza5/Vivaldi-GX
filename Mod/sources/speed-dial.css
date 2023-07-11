@@ -58,6 +58,7 @@
   width: 100%;
   height: 100%;
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0);
+  pointer-events: none;
 }
 /* Folder needs border for bottom right cut corner */
 .dials.speeddial .dial.folder:focus::before {
