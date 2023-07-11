@@ -368,3 +368,8 @@ progress.pageload-indicator {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
+/* Set URL Field font size */
+.UrlField {
+  font-size: 14px !important;
+}
