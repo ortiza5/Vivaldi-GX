@@ -94,6 +94,7 @@
 }
 
 /* Give more space for URL */
+.UrlBar-UrlFieldWrapper .observer .UrlField input,
 .UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
   padding-top: 5px !important;
   padding-left: 18px !important;
