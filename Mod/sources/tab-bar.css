@@ -196,14 +196,14 @@
   );
 }
 /* TODO: look into unread tab indicator */
-/* .tab-position .tab.unread .close:not(:hover) {
-    background-color: var(--GXbuttonFill) !important;
+.tab-position .tab.unread .close:not(:hover) {
+  background-color: var(--GXbuttonFill) !important;
   border-radius: 100%;
   transform: scale(0.5);
 }
 .tab-position .tab.unread .close:not(:hover) svg {
   transform: scale(0);
-} */
+}
 
 /* Cut off top left corner of tab and draw border along the edge */
 #tabs-container .tab:not(.tab-group) {
