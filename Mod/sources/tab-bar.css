@@ -133,7 +133,7 @@
 /* Remove gap between main and secondary tab bars */
 .tabs-top .tab-position .tab.insubstrip,
 .tabs-bottom .tab-position .tab.insubstrip {
-  margin: -1px 1px;
+  margin: 0;
 }
 
 /* Border on the left of the 2nd level tab bar */
@@ -142,9 +142,6 @@
 }
 #tabs-subcontainer {
   border-right: var(--arePanelsSetToLeft, 1px solid var(--GXborderColor)) !important;
-}
-#tabs-subcontainer span:first-of-type .tab {
-  border-left: 0;
 }
 
 /* Stylize compact tab stack indicators */
@@ -424,4 +421,9 @@
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
   background-color: transparent;
   background-image: linear-gradient(to top, var(--colorBgAlphaBlur), var(--colorBg));
+}
+
+/* Push tab stack tabs below the bar borders */
+#tabs-subcontainer .tab-position {
+  z-index: 0;
 }
