@@ -327,9 +327,10 @@
   color: var(--colorHighlightFg);
   fill: var(--colorHighlightFg);
 }
-.active.tooltip-item.active {
+/* Border under active tab preview */
+/* .active.tooltip-item.active {
   border-bottom: 1px solid var(--GXborderColor);
-}
+} */
 #vivaldi-tooltip .tooltip-item .tooltip-audio-button {
   background-color: transparent !important;
 }
