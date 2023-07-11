@@ -63,7 +63,7 @@
 .mainbar > .toolbar-mainbar .SearchField-Popup .SearchField {
   background-color: var(--colorAccentBg);
   border: unset !important;
-  margin-top: 1px;
+  height: 29px;
 }
 .color-behind-tabs-on .UrlBar-AddressField,
 .color-behind-tabs-on .UrlBar-SearchField,
