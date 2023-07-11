@@ -98,7 +98,7 @@
 .UrlBar-UrlFieldWrapper .observer .UrlField input,
 .UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
   padding-top: 5px !important;
-  padding-left: 18px !important;
+  padding-left: 16px !important;
 }
 
 /* Make active bookmark icon match other buttons */
@@ -146,7 +146,7 @@ path[d^="M3 4h10v1H3zM3"] {
   font-size: 19px;
 }
 .UrlBar-AddressField::before {
-  left: 5px;
+  left: 10px;
 }
 .UrlBar-AddressField::after {
   right: 10px;
