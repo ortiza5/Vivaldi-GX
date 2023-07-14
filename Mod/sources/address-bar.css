@@ -32,8 +32,19 @@
 }
 
 /* Space out contents of address field */
-.UrlBar-AddressField .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput {
+.UrlBar-AddressField .toolbar-insideinput {
   margin-left: 20px;
+}
+.UrlBar-AddressField .toolbar-insideinput:first-of-type {
+  margin-left: 14px;
+}
+/* Space out the right-side buttons in the address field */
+.toolbar.toolbar-small.toolbar-insideinput:last-of-type {
+  margin-right: 14px;
+  min-width: 20px;
+  justify-content: flex-end;
+  gap: 5px;
+  height: 100%;
 }
 
 /* Adds extra space between extension icons */
@@ -85,15 +96,6 @@
   background-color: var(--colorAccentBgFadedMore);
 }
 
-/* Space out the right-side buttons in the address field */
-.toolbar.toolbar-small.toolbar-insideinput:last-of-type {
-  margin-right: 20px;
-  min-width: 20px;
-  justify-content: flex-end;
-  gap: 5px;
-  height: 100%;
-}
-
 /* Give more space for URL */
 .UrlBar-UrlFieldWrapper .observer .UrlField input,
 .UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
@@ -141,15 +143,24 @@ path[d^="M3 4h10v1H3zM3"] {
 .UrlBar-AddressField::after {
   content: var(--GXaddressFieldSideBorders);
   position: absolute;
-  height: 30px;
+  height: 100%;
   color: var(--colorAccentFgAlpha);
   font-size: 19px;
+  opacity: 1;
+  transition: opacity 0.2s;
 }
 .UrlBar-AddressField::before {
-  left: 10px;
+  left: 0;
 }
 .UrlBar-AddressField::after {
-  right: 10px;
+  right: 0;
+}
+/* Hide on focus and hover */
+.UrlBar-AddressField:hover::before,
+.UrlBar-AddressField:focus-within:before,
+.UrlBar-AddressField:hover::after,
+.UrlBar-AddressField:focus-within:after {
+  opacity: 0;
 }
 
 /* Give special hover color for buttons in address field */
@@ -213,7 +224,7 @@ path[d^="M3 4h10v1H3zM3"] {
   margin-top: -2px;
 }
 .mainbar > .toolbar-mainbar .toolbar-insideinput.SearchEngineSelect-Icon {
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 /* Stylize the dropdown menues of the fields */
