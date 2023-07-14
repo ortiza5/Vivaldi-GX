@@ -24,6 +24,9 @@
   background-color: transparent !important;
   margin-bottom: 1px;
 }
+.button-toolbar.workspace-popup.tabbar-workspace-button button {
+  height: 29px;
+}
 
 /* Remove default border below/above tab bar */
 .address-bottom #tabs-tabbar-container.top,
