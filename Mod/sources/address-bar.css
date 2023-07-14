@@ -141,6 +141,8 @@ path[d^="M3 4h10v1H3zM3"] {
   height: 12px;
   border: unset;
   min-width: 12px;
+  /* Shifts to the bottom corner - might disable if breaks any extensions */
+  margin-top: 18px;
 }
 
 /* Side borders on address field */
