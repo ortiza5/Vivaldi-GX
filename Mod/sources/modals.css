@@ -35,6 +35,10 @@
   border-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFgFaded) !important;
 }
+.button-popup:has(.account-dialog) button {
+  border-color: transparent !important;
+  border-radius: unset;
+}
 /* Clock up/down arrows are drawn with a background image */
 .button-popup:not(:has(.SearchField)) input,
 .button-popup:not(:has(.SearchField)) button:not(.ClockPopup-Spinner--up):not(.ClockPopup-Spinner--down),
