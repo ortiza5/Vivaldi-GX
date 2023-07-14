@@ -103,6 +103,7 @@
   padding-left: 18px;
 }
 
+/* Stylize the Bookmark Button */
 /* Make active bookmark icon match other buttons */
 .BookmarkButton .button-on .bookmark-animated-fill {
   fill: var(--GXbuttonFill) !important;
@@ -114,6 +115,10 @@
 /* Hide "Added bookmark" text on clicking bookmark button */
 .BookmarkButton-Button .ToolbarButton-Button > .button-title {
   display: none !important;
+}
+/* Make border same color as background */
+.BookmarkButton .button-on .bookmark-outline {
+  fill: unset;
 }
 
 /* Replace reader view icon with larger version */
