@@ -124,9 +124,12 @@
 }
 
 /* Borders left/top/right around active tab */
-#tabs-tabbar-container .tab.active {
-  border: 1px solid var(--GXborderColor);
+#tabs-tabbar-container .tab {
+  border: 1px solid transparent;
   border-bottom-width: 0;
+}
+#tabs-tabbar-container .tab.active {
+  border-color: var(--GXborderColor);
 }
 
 /* Remove gap between main and secondary tab bars */
@@ -272,25 +275,6 @@
   padding-top: 7px;
   padding-bottom: 5px;
   padding-left: 3px;
-}
-
-/* Prevent tab contents from shifting while activated */
-/* default is 6px, so the 1px border needs to be subtracted */
-#tabs-container .tab.active .tab-header,
-#tabs-subcontainer .tab.active .tab-header {
-  padding-left: 5px;
-  padding-top: 5px;
-}
-#browser:not(.alt-tabs) #tabs-container .tab.active:not(.tab-mini) .close,
-#browser:not(.alt-tabs) #tabs-subcontainer .tab.active:not(.tab-mini) .close {
-  margin-right: 5px;
-}
-#tabs-container .tab-position .tab.active.tab-group .tab-header {
-  padding-top: 6px;
-  padding-left: 2px;
-}
-#browser:not(.alt-tabs) #tabs-container .tab.tab.active.tab-group:not(.tab-mini) .close {
-  margin-right: 2px;
 }
 
 /* Hide backdrop behind active tab's favicon */
