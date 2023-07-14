@@ -36,7 +36,10 @@
   margin-left: 20px;
 }
 .UrlBar-AddressField .toolbar-insideinput:first-of-type {
-  margin-left: 14px;
+  margin-left: 15px;
+}
+.UrlBar-AddressField {
+  margin-left: 7px;
 }
 /* Space out the right-side buttons in the address field */
 .toolbar.toolbar-small.toolbar-insideinput:last-of-type {
