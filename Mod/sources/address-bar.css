@@ -185,7 +185,7 @@ path[d^="M3 4h10v1H3zM3"] {
 
 /* Stylize site info button, padlock */
 .SiteInfoButton {
-  margin-left: 15px;
+  margin-left: 13px;
 }
 .SiteInfoButton:hover {
   background-color: hsla(0, 0%, 100%, 0.15);
