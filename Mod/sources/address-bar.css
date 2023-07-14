@@ -39,7 +39,10 @@
   margin-left: 15px;
 }
 .UrlBar-AddressField {
-  margin-left: 7px;
+  margin: 0 7px;
+}
+.UrlBar-AddressField:has(+ .SearchField) {
+  margin-right: 2px;
 }
 /* Space out the right-side buttons in the address field */
 .toolbar.toolbar-small.toolbar-insideinput:last-of-type {
