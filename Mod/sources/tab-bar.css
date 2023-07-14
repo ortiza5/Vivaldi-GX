@@ -22,7 +22,7 @@
 /* also prevent hovered state from overlaping border */
 .tabbar-workspace-button.workspace-popup {
   background-color: transparent !important;
-  z-index: 0;
+  margin-bottom: 1px;
 }
 
 /* Remove default border below/above tab bar */
