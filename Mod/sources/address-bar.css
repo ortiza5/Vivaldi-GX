@@ -99,8 +99,8 @@
 /* Give more space for URL */
 .UrlBar-UrlFieldWrapper .observer .UrlField input,
 .UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
-  padding-top: 5px !important;
-  padding-left: 16px !important;
+  padding-top: 5px;
+  padding-left: 18px;
 }
 
 /* Make active bookmark icon match other buttons */
