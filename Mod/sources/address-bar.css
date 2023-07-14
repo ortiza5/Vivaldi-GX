@@ -390,3 +390,9 @@ progress.pageload-indicator {
   padding-left: var(--arePanelsSetToLeft, 5px);
   padding-right: var(--arePanelsSetToRight, 5px);
 }
+
+/* Shift address bar buttons up a bit */
+.mainbar > .toolbar-mainbar > .button-toolbar:not(.profile-popup),
+.mainbar > .toolbar-mainbar > .toolbar-extensions .button-toolbar {
+  top: -1px;
+}
