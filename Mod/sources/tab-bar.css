@@ -410,3 +410,21 @@
 #tabs-subcontainer .tab-position {
   z-index: 0;
 }
+
+/* Remove corner rounding from tab lower corners of tabs */
+.tab-position.is-substack > .tab.active {
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  margin-bottom: 0;
+}
+.tabs-top .tab.active:not(.marked):not(.tab-mini):not(.tab-in-accordion):after,
+.tabs-top .tab.active:not(.marked):not(.tab-mini):not(.tab-in-accordion):before,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):not(.tab-in-accordion):after,
+.tabs-bottom .tab.active:not(.marked):not(.tab-mini):not(.tab-in-accordion):before {
+  content: unset;
+}
+
+/* Remove corner rounding from top left to prevent interfering with cut */
+#tabs-container .tab-position .tab {
+  border-top-left-radius: unset !important;
+}
