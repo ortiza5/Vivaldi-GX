@@ -17,13 +17,19 @@
 
 /* Set the font color for the results */
 .quick-command-container .quick-commands .quick-command .quick-command-title {
-  color: var(--colorHighlightBgDark);
+  color: var(--colorFgFadedMost);
 }
 .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
-  color: var(--colorHighlightFg);
+  color: var(--colorFg);
+  font-weight: 500;
 }
 .isblurred .quick-command-container .quick-commands .quick-command[data-selected] .quick-command-title {
   color: var(--colorFg);
+}
+
+/* Remove extra corner rounding */
+.quick-command-container input {
+  border-radius: unset;
 }
 
 /* Give favicon or results a background when hovered/selected */
