@@ -10,6 +10,22 @@
   background-color: var(--colorAccentBgFadedMore) !important;
   color: var(--colorAccentFg);
 }
+/* Make unfocused search bar look like GX */
+.sdwrapper .SpeedDialView-SearchField.SearchField:not(:focus-within) {
+  background-color: unset;
+  border-radius: unset;
+  backdrop-filter: unset;
+  box-shadow: unset;
+}
+.sdwrapper .SpeedDialView-SearchField.SearchField:not(:focus-within)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  height: 2px;
+  width: calc(100% - 30px);
+  background-color: var(--GXborderColor);
+}
 
 /* Stylize starpage navigation buttons */
 .startpage-navigation .button-toolbar button {
