@@ -49,8 +49,7 @@
 #tabs-subcontainer {
   position: relative;
 }
-#tabs-container::before,
-#tabs-subcontainer::before {
+#tabs-container::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -69,7 +68,7 @@
 }
 
 /* Cover up the lower border to the right of the active tab */
-.tab-position:has(.tab.active)::before {
+#tabs-container .tab-position:has(.tab.active)::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -77,6 +76,20 @@
   height: 1px;
   width: 100vw;
   background-color: var(--colorAccentBg);
+}
+
+/* Fix missing border on 2nd level tabs for certain screens */
+#tabs-subcontainer {
+  overflow-x: hidden;
+}
+#tabs-subcontainer .tab-position:has(.tab.active)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: var(--Width);
+  height: 1px;
+  width: 100vw;
+  background-color: var(--GXborderColor);
 }
 
 /* Have gradient lower border to the right of the active tab */
@@ -411,11 +424,6 @@
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
   background-color: transparent;
   background-image: linear-gradient(to top, var(--colorBgAlphaBlur), var(--colorBg));
-}
-
-/* Push tab stack tabs below the bar borders */
-#tabs-subcontainer .tab-position {
-  z-index: 0;
 }
 
 /* Remove corner rounding from tab lower corners of tabs */
