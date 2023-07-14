@@ -312,7 +312,7 @@ span.OmniLinkItem-Details {
 .UrlBar-PrivateWindowIndicator {
   background-color: var(--colorHighlightBg);
   height: 20px;
-  margin-left: 1px;
+  margin: 0 2px 1px 2px;
   color: var(--colorHighlightFg);
 }
 
