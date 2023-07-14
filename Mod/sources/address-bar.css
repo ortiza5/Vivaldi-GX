@@ -384,3 +384,9 @@ progress.pageload-indicator {
 .UrlField {
   font-size: 14px !important;
 }
+
+/* Add slight padding to the side opposite the panels */
+#browser.address-top .mainbar > .toolbar-mainbar {
+  padding-left: var(--arePanelsSetToLeft, 5px);
+  padding-right: var(--arePanelsSetToRight, 5px);
+}
