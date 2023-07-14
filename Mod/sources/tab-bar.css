@@ -194,7 +194,7 @@
     "M13.374,4.335l-.707-.707L8.508,7.787a.012.012,0,0,1-.016,0L4.333,3.628l-.707.707L7.785,8.494a.012.012,0,0,1,0,.016L3.626,12.669l.707.707L8.492,9.217a.012.012,0,0,1,.016,0l4.159,4.159.707-.707L9.215,8.51a.012.012,0,0,1,0-.016Z"
   );
 }
-/* TODO: look into unread tab indicator */
+/* Show tab unread indicator on hover */
 .tab-position .tab.unread .close:not(:hover) {
   background-color: var(--GXbuttonFill) !important;
   border-radius: 100%;
@@ -202,6 +202,10 @@
 }
 .tab-position .tab.unread .close:not(:hover) svg {
   transform: scale(0);
+}
+/* Hide default unread indicator */
+.tab-position .tab.unread {
+  background-image: unset;
 }
 
 /* Cut off top left corner of tab and draw border along the edge */
