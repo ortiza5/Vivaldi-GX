@@ -9,5 +9,5 @@
   --GXaddressBarButtonFill: var(--GXbuttonFill);
   --GXbookmarkBarButtonFill: var(--GXbuttonFill);
   /* Set the variable below to "transparent" to get the original look of Opera GX */
-  --GXspeedDialSearchBgColor: var(--colorBgAlphaBlur);
+  --GXspeedDialSearchBgColor: transparent;
 }
