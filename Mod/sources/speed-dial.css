@@ -28,6 +28,7 @@
   top: 0;
   backdrop-filter: var(--backgroundBlur);
   background-color: var(--GXspeedDialSearchBgColor);
+  border-radius: var(--radius);
   z-index: -1;
 }
 /* Remove default focus indication */
@@ -63,6 +64,11 @@
 .SpeedDialView-SearchField:has(nav.menu) .SearchEngineSelect-Icon::after {
   left: 0;
   width: 100%;
+}
+.sdwrapper .SpeedDialView-SearchField.SearchField:has(.OmniDropdown):focus-within::before,
+.sdwrapper .SpeedDialView-SearchField.SearchField:has(nav.menu):focus-within::before {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* Stylize starpage navigation buttons */
