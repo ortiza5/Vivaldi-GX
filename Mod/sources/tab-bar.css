@@ -86,7 +86,8 @@
   content: "";
   position: absolute;
   bottom: 0;
-  right: var(--Width);
+  right: var(--arePanelsSetToRight, var(--Width));
+  left: var(--arePanelsSetToLeft, var(--Width));
   height: 1px;
   width: 100vw;
   background-color: var(--GXborderColor);
