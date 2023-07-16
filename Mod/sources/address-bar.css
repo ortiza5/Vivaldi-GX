@@ -241,7 +241,7 @@ path[d^="M3 4h10v1H3zM3"] {
 }
 
 /* Stylize the dropdown menues of the fields */
-.OmniDropdown {
+:not(.SpeedDialView-SearchField) > .OmniDropdown {
   background-color: var(--colorAccentBgFadedMore);
   border-bottom-left-radius: var(--radiusHalf);
   border-bottom-right-radius: var(--radiusHalf);
@@ -348,7 +348,7 @@ progress.pageload-indicator {
 .SearchField-Popup nav.menu {
   top: 26px;
 }
-#main .SearchField nav.menu > ul,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul,
 .SearchField-Popup nav.menu > ul {
   background-color: var(--colorAccentBgFadedMore);
   border-bottom-left-radius: 4px;
@@ -358,24 +358,24 @@ progress.pageload-indicator {
   border: 2px solid var(--colorAccentBgFadedMost);
   border-top: unset;
 }
-#main .SearchField nav.menu > ul:before,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul:before,
 .SearchField-Popup nav.menu > ul:before {
   /* content: unset; */
 }
-#main .SearchField nav.menu > ul > li,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul > li,
 .SearchField-Popup nav.menu > ul > li {
   padding: 0px 5px;
 }
-#main .SearchField nav.menu > ul > li.selectedItem,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul > li.selectedItem,
 .SearchField-Popup nav.menu > ul > li.selectedItem {
   background-color: var(--colorHighlightBgAlpha);
 }
-#main .SearchField nav.menu > ul > li a,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul > li a,
 .SearchField-Popup nav.menu > ul > li a {
   background-color: transparent;
   height: 36px;
 }
-#main .SearchField nav.menu > ul > li .menu-icon,
+#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul > li .menu-icon,
 .SearchField-Popup nav.menu > ul > li .menu-icon {
   padding: 6px;
 }

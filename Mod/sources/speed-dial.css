@@ -1,30 +1,67 @@
-/* Style startpage search box dropdown like address bar dropdown */
-.SpeedDialView-SearchField .OmniDropdwon {
-  top: 26px;
+/* Stylize search box dropdowns */
+.SpeedDialView-SearchField .OmniDropdown,
+.sdwrapper .SearchField nav.menu {
+  top: 33px;
+  margin-top: 1px;
+  backdrop-filter: var(--backgroundBlur);
+  background-color: var(--colorBgAlphaBlur);
 }
-.SpeedDialView-SearchField nav.menu {
-  top: 32px !important;
+.SpeedDialView-SearchField.SearchField nav.menu > ul {
+  background-color: unset;
 }
-.startpage .SearchField:focus-within {
-  outline-offset: -3px;
-  background-color: var(--colorAccentBgFadedMore) !important;
-  color: var(--colorAccentFg);
-}
-/* Make unfocused search bar look like GX */
-.sdwrapper .SpeedDialView-SearchField.SearchField:not(:focus-within) {
+/* When unfocused search should blend in with background */
+.sdwrapper .SpeedDialView-SearchField.SearchField {
   background-color: unset;
   border-radius: unset;
   backdrop-filter: unset;
   box-shadow: unset;
 }
-.sdwrapper .SpeedDialView-SearchField.SearchField:not(:focus-within)::after {
+/* Give the search input a background that doesn't interfere with the dropdown style */
+/* https://stackoverflow.com/a/76207141 */
+.sdwrapper .SpeedDialView-SearchField.SearchField:focus-within::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  backdrop-filter: var(--backgroundBlur);
+  background-color: var(--GXspeedDialSearchBgColor);
+  z-index: -1;
+}
+/* Remove default focus indication */
+.sdwrapper .SpeedDialView-SearchField.SearchField:focus-within {
+  box-shadow: unset;
+  outline: unset;
+}
+/* Add bar under search field that animates on focus */
+.SpeedDialView-SearchField .SearchEngineSelect-Icon::before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 30px;
   height: 2px;
   width: calc(100% - 30px);
+  background-color: color-mix(in hsl, var(--GXborderColor) 60%, white);
+}
+.SpeedDialView-SearchField .SearchEngineSelect-Icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  height: 2px;
+  width: 0;
   background-color: var(--GXborderColor);
+  transition: 0.3s ease-out;
+}
+.SpeedDialView-SearchField:focus-within .SearchEngineSelect-Icon::after {
+  width: calc(100% - 30px);
+}
+/* When the dropdown is present, make the bar extend the full width */
+.SpeedDialView-SearchField:has(.OmniDropdown) .SearchEngineSelect-Icon::after,
+.SpeedDialView-SearchField:has(nav.menu) .SearchEngineSelect-Icon::after {
+  left: 0;
+  width: 100%;
 }
 
 /* Stylize starpage navigation buttons */

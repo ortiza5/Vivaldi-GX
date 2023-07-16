@@ -8,4 +8,6 @@
   /* By default, "var(--GXbuttonFill)", the buttons will match the rest of the UI */
   --GXaddressBarButtonFill: var(--GXbuttonFill);
   --GXbookmarkBarButtonFill: var(--GXbuttonFill);
+  /* Set the variable below to "transparent" to get the original look of Opera GX */
+  --GXspeedDialSearchBgColor: var(--colorBgAlphaBlur);
 }
