@@ -148,6 +148,12 @@
   border-color: var(--GXborderColor);
 }
 
+/* Hide 2nd level tab border when on panel side edge */
+#browser:has(#panels-container.left) #tabs-subcontainer span:first-of-type .tab.active {
+  border-left: unset;
+  padding-left: 1px;
+}
+
 /* Remove gap between main and secondary tab bars */
 .tabs-top .tab-position .tab.insubstrip,
 .tabs-bottom .tab-position .tab.insubstrip {
