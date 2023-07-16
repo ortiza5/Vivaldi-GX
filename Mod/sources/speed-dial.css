@@ -5,6 +5,7 @@
   margin-top: 1px;
   backdrop-filter: var(--backgroundBlur);
   background-color: var(--colorBgAlphaBlur);
+  border-radius: 0 0 var(--radiusCap) var(--radiusCap);
 }
 .SpeedDialView-SearchField.SearchField nav.menu > ul {
   background-color: unset;
