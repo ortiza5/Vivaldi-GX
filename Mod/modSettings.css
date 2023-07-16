@@ -35,3 +35,8 @@
 /* These are additional parts that can be switched ON/OFF without harm */
 @import "snippets/hibernated_tabs_indicator.css";
 @import "snippets/ominibox_rounded_favicons.css";
+
+/* Overrides */
+/* Add a file called "overrides.css" under the the "sources" folder to allow */
+/* easy overriding of the default CSS used in the mod */
+@import "sources/overrides.css";
