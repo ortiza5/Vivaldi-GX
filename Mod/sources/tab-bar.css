@@ -77,6 +77,9 @@
   width: 100vw;
   background-color: var(--colorAccentBg);
 }
+#tabs-container .tab-position.is-substack:has(.tab.active)::before {
+  background-color: var(--colorBgAlphaBlur);
+}
 
 /* Fix missing border on 2nd level tabs for certain screens */
 #tabs-subcontainer {
