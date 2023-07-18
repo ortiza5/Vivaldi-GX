@@ -433,10 +433,9 @@
   background-image: linear-gradient(to top, var(--colorBgAlphaBlur), var(--colorBg));
 }
 
-/* Remove corner rounding from tab lower corners of tabs */
-.tab-position.is-substack > .tab.active {
-  border-bottom-left-radius: unset;
-  border-bottom-right-radius: unset;
+/* Remove corner rounding from corners of tabs */
+.tab-position > .tab.active {
+  border-radius: unset !important;
   margin-bottom: 0;
 }
 .tabs-top .tab.active:not(.marked):not(.tab-mini):not(.tab-in-accordion):after,
