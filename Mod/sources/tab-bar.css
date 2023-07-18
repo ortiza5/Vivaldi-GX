@@ -102,7 +102,7 @@
   content: " ";
   position: absolute;
   bottom: 0px;
-  right: calc(calc(var(--modLineWidth) - 2px) * -1);
+  right: calc(calc(var(--modLineWidth) - 1px) * -1);
   height: 1px;
   width: var(--modLineWidth);
   background-image: linear-gradient(to right, var(--GXborderColor), transparent);
