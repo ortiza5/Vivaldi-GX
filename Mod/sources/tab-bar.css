@@ -450,3 +450,13 @@
 #tabs-container .tab-position .tab {
   border-top-left-radius: unset !important;
 }
+
+/* Make tab stack rename input focused/unfocused state match */
+.tab-position .tab .title input {
+  color: var(--colorAccentFg);
+  background-color: var(--colorAccentBgDark);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: none;
+  border-width: 1px;
+  margin-left: -3px;
+}
