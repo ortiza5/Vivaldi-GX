@@ -72,8 +72,7 @@
   content: "";
   position: absolute;
   bottom: 0;
-  right: var(--arePanelsSetToLeft, 2px);
-  left: var(--arePanelsSetToRight, 1px);
+  right: var(--arePanelsSetToLeft, 0);
   height: 1px;
   width: 100vw;
   background-color: var(--colorAccentBg);
