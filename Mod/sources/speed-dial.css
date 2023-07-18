@@ -17,6 +17,10 @@
   backdrop-filter: unset;
   box-shadow: unset;
 }
+/* Change search text color to be visible on background */
+.sdwrapper .SpeedDialView-SearchField.SearchField {
+  color: var(--colorImageCenterFg);
+}
 /* Give the search input a background that doesn't interfere with the dropdown style */
 /* https://stackoverflow.com/a/76207141 */
 .sdwrapper .SpeedDialView-SearchField.SearchField:focus-within::before {
