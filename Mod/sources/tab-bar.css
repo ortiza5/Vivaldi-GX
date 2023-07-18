@@ -72,13 +72,11 @@
   content: "";
   position: absolute;
   bottom: 0;
-  right: var(--arePanelsSetToLeft, 0);
+  right: var(--arePanelsSetToLeft, 2px);
+  left: var(--arePanelsSetToRight, 1px);
   height: 1px;
   width: 100vw;
   background-color: var(--colorAccentBg);
-}
-#tabs-container .tab-position.is-substack:has(.tab.active)::before {
-  background-color: var(--colorBgAlphaBlur);
 }
 
 /* Fix missing border on 2nd level tabs for certain screens */
@@ -104,7 +102,7 @@
   content: " ";
   position: absolute;
   bottom: 0px;
-  right: calc(calc(var(--modLineWidth) - 1px) * -1);
+  right: calc(calc(var(--modLineWidth) - 2px) * -1);
   height: 1px;
   width: var(--modLineWidth);
   background-image: linear-gradient(to right, var(--GXborderColor), transparent);
