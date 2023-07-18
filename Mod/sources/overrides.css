@@ -1,0 +1,13 @@
+/* Give speed dial search a background and outline on focus */
+.sdwrapper .SpeedDialView-SearchField.SearchField:focus-within::before {
+  background-color: color-mix(in hsl, var(--colorBgAlphaBlur) 50%, transparent);
+  outline: 2px solid var(--colorBgAlphaBlur);
+  outline-offset: -2px;
+}
+.SpeedDialView-SearchField:not(:has(.OmniDropdown)):not(:has(nav.menu)):focus-within .SearchEngineSelect-Icon::after {
+  left: calc(var(--radiusHalf) + 1px);
+  width: calc(100% - var(--radius) - 2px);
+}
+.SpeedDialView-SearchField:not(:has(.OmniDropdown)):not(:has(nav.menu)):focus-within .SearchEngineSelect-Icon::before {
+  width: calc(100% - var(--radius) - 32px);
+}
