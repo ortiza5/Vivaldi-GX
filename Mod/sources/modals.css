@@ -60,6 +60,11 @@
   color: var(--colorHighlightBg) !important;
   border-color: var(--colorHighlightBgDark) !important;
 }
+.button-popup:not(:has(.SearchField)) input[type="submit"]:hover,
+#modal-bg input[type="submit"]:hover {
+  background-color: var(--colorHighlightBgDark) !important;
+  color: var(--colorHighlightFg) !important;
+}
 
 /* Make the bookmark details blend with background */
 .button-popup:not(:has(.SearchField)) .BookmarkInputField input {
