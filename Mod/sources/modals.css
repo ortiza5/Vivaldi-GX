@@ -103,3 +103,12 @@
   background-image: linear-gradient(55deg, var(--colorAccentBgDark) 43%, transparent 45%), linear-gradient(125deg, transparent 53%, var(--colorAccentBgDark) 55%),
     linear-gradient(180deg, var(--colorAccentBgDark) 30%, var(--colorAccentFg) 30%);
 }
+
+/* Make checked checkboxes more visible again */
+.button-popup:not(:has(.SearchField)) input[type="checkbox"]:checked {
+  background-color: var(--colorHighlightBg) !important;
+}
+.button-popup:not(:has(.SearchField)) input[type="radio"]:checked,
+.button-popup:not(:has(.SearchField)) input[type="checkbox"]:checked {
+  border-color: var(--colorHighlightBg) !important;
+}
