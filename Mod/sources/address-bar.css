@@ -178,8 +178,11 @@ path[d^="M3 4h10v1H3zM3"] {
 
 /* Give special hover color for buttons in address field */
 .toolbar-insideinput > .button-toolbar button:hover:not(.button-pressed),
-.UrlBar-AddressField > .BookmarkButton:hover {
+.UrlBar-AddressField .BookmarkButton.BookmarkButton:hover {
   border-radius: 0px !important;
+  background-color: hsla(0, 0%, 100%, 0.15) !important;
+}
+.UrlBar-AddressField .BookmarkButton > .button-toolbar button:hover {
   background-color: hsla(0, 0%, 100%, 0.15) !important;
 }
 
