@@ -80,7 +80,8 @@
 
 /* Fix for fade to accent bug when transparency is disabled */
 #browser:not([style^="--colorTabBar: transparent"]) #tabs-container .tab-position.is-substack:has(.tab.active)::before {
-  background: linear-gradient(to right, var(--colorAccentBg) var(--Width), var(--colorBg) var(--Width), var(--colorBg));
+  --adjustedWidth: calc(var(--Width) - 2px);
+  background: linear-gradient(to right, transparent, var(--colorAccentBg) 2px, var(--colorAccentBg) var(--adjustedWidth), var(--colorBg) var(--adjustedWidth), var(--colorBg));
 }
 
 /* Fix missing border on 2nd level tabs for certain screens */
