@@ -1,0 +1,8 @@
+.UrlBar-UrlFieldWrapper .observer .UrlField input,
+.UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
+  padding-top: 4px;
+}
+
+.tab-position .tab .title {
+  margin-top: -1px;
+}
