@@ -75,47 +75,13 @@
   right: var(--arePanelsSetToLeft, 0);
   height: 1px;
   width: 100vw;
-  background-color: var(--colorAccentBg);
+  background: var(--colorAccentBg);
 }
 
-/* TODO: Attempt at fixing fade to accent bug */
-/* ================================================= */
-/* Cover up the lower border to the right of the active tab */
-/* #tabs-container .tab-position:has(.tab.active)::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: var(--arePanelsSetToLeft, var(--Width));
-  left: var(--arePanelsSetToRight, var(--Width));
-  height: 1px;
-  width: 100vw;
-  background-color: var(--colorBgAlphaBlur);
+/* Fix for fade to accent bug when transparency is disabled */
+#browser:not([style^="--colorTabBar: transparent"]) #tabs-container .tab-position.is-substack:has(.tab.active)::before {
+  background: linear-gradient(to right, var(--colorAccentBg) var(--Width), var(--colorBg) var(--Width), var(--colorBg));
 }
-
-#browser[style^="--colorTabBar: transparent"] #tabs-container .tab-position:has(.tab.active)::before {
-  right: var(--arePanelsSetToLeft, 0);
-  left: unset;
-  background-color: var(--colorAccentBg);
-}
-#browser:not([style^="--colorTabBar: transparent"]) #tabs-container .tab-position .tab.active::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 1px;
-  height: 1px;
-  width: calc(var(--Width) - 3px);
-  background-color: var(--colorAccentBg);
-  -webkit-mask-image: unset;
-}
-
-.tab-position:has(.tab.active) {
-  top: 1px;
-  height: calc(var(--Height) - 1);
-}
-.tab-position .tab.active {
-  margin-top: -1px;
-} */
-/* ================================================= */
 
 /* Fix missing border on 2nd level tabs for certain screens */
 #tabs-subcontainer {
