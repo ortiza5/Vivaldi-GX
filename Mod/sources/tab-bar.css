@@ -193,7 +193,7 @@
   bottom: unset !important;
 }
 .tab-indicator + .tab-indicator {
-  margin-left: 0;
+  margin-left: -1px;
 }
 .tab-indicator {
   border: 1px solid var(--GXborderColor) !important;
@@ -484,4 +484,16 @@
 }
 #browser.color-behind-tabs-on .tab-position .tab .title input {
   background-color: var(--colorBgDark);
+}
+
+/* Remove new corner rounding on tab stack indicators */
+.tab-group-indicator {
+  padding-right: unset;
+  padding-left: unset;
+}
+.tab-indicator:first-of-type {
+  border-top-left-radius: unset;
+}
+.tab-indicator:last-of-type {
+  border-top-right-radius: unset;
 }
