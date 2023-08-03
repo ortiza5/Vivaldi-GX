@@ -72,3 +72,18 @@
 #switch > button:not(.toolbar-spacer, .toolbar-spacer-flexible, .divider):active {
   background-color: unset;
 }
+
+/* Add border under panel headers */
+.panel > header h1 {
+  position: relative;
+  margin: 0 auto 15px 0;
+}
+.panel > header h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, var(--GXborderColor), transparent);
+}
