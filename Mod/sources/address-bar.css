@@ -412,3 +412,11 @@ progress.pageload-indicator {
 .mainbar > .toolbar-mainbar > .toolbar-extensions .button-toolbar {
   top: -1px;
 }
+
+/* Make hidden extension toggle background match the extension icons' */
+.color-behind-tabs-off .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
+  background-color: var(--colorAccentBgDark);
+}
+.color-behind-tabs-on .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
+  background-color: var(--colorBgDark);
+}
