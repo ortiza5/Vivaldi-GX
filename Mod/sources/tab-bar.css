@@ -85,6 +85,15 @@
   background: linear-gradient(to right, transparent, var(--colorAccentBg) 2px, var(--colorAccentBg) var(--adjustedWidth), var(--colorBg) var(--adjustedWidth), var(--colorBg));
 }
 
+/* Support Accent on Window setting */
+#browser.color-behind-tabs-on #tabs-container .tab-position.is-substack:has(.tab.active)::before {
+  --adjustedWidth: calc(var(--Width) - 2px);
+  background: linear-gradient(to right, transparent, var(--colorBg) 2px, var(--colorBg) var(--adjustedWidth), var(--colorBg) var(--adjustedWidth), var(--colorBg));
+}
+#browser.color-behind-tabs-on #tabs-container .tab-position:has(.tab.active)::before {
+  background: var(--colorBg);
+}
+
 /* Fix missing border on 2nd level tabs for certain screens */
 #tabs-subcontainer {
   overflow-x: hidden;
@@ -322,6 +331,9 @@
 .tab-position .tab .tab-header .favicon:not(.svg) {
   filter: drop-shadow(0px 0px 1px var(--colorAccentBg));
 }
+#browser.color-behind-tabs-on .tab-position .tab .tab-header .favicon:not(.svg) {
+  filter: drop-shadow(0px 0px 1px var(--colorBg));
+}
 
 /* Hide default borders above and below 2nd level tabs */
 #tabs-subcontainer {
@@ -430,6 +442,10 @@
   background-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFg) !important;
 }
+#browser.color-behind-tabs-on .tab.active .stack-counter {
+  background-color: var(--colorBg) !important;
+  color: var(--colorFg) !important;
+}
 
 /* For non-transparent tab bar, fade into transparent UI */
 #browser:not(.transparent-tabbar).tabs-top #header {
@@ -465,4 +481,7 @@
   box-shadow: none;
   border-width: 1px;
   margin-left: -3px;
+}
+#browser.color-behind-tabs-on .tab-position .tab .title input {
+  background-color: var(--colorBgDark);
 }
