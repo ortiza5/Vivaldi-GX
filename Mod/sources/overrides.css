@@ -6,3 +6,7 @@
 .tab-position .tab .title {
   margin-top: -1px;
 }
+.tab-position .tab .tab-header {
+  margin-left: -1px;
+  margin-top: -1px;
+}
