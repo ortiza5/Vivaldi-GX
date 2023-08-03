@@ -64,7 +64,8 @@
 }
 /* When the panel is hidden contine the border all the way */
 #browser:has(#panels-container[style*="width: 0px;"]) #tabs-container::before {
-  left: calc(-1 * var(--GXpanelWidth));
+  left: var(--arePanelsSetToRight, calc(-1 * var(--GXpanelWidth)));
+  right: var(--arePanelsSetToLeft, calc(-1 * var(--GXpanelWidth)));
 }
 
 /* Cover up the lower border to the right of the active tab */
