@@ -85,5 +85,5 @@
   bottom: -6px;
   width: 80%;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--GXborderColor) 12px, transparent);
+  background: linear-gradient(to right, transparent, var(--GXborderColor) 2px, transparent);
 }
