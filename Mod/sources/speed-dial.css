@@ -116,7 +116,7 @@
   padding-right: 14px;
 }
 /* Fill top left corner for focus indicator */
-.dials.speeddial .dial:focus::before {
+.dials.speeddial .dial:focus-visible::before {
   content: "";
   position: absolute;
   top: 0;
@@ -126,7 +126,7 @@
   pointer-events: none;
 }
 /* Folder needs border for bottom right cut corner */
-.dials.speeddial .dial:focus::before {
+.dials.speeddial .dial:focus-visible::before {
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0, transparent 93.5%, var(--colorHighlightBg) 0);
 }
 .dials .dial .button-title {
