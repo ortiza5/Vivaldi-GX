@@ -17,6 +17,12 @@
   padding-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
   padding-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
 }
+#browser:not(.horizontal-menu):has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible,
+#browser.horizontal-menu:has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible {
+  margin-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
+  margin-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
+  padding: unset;
+}
 
 /* Hide background on workspace button when on tab bar */
 /* also prevent hovered state from overlaping border */
