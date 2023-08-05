@@ -14,8 +14,8 @@
 }
 #browser:not(.horizontal-menu) #tabs-subcontainer.visible,
 #browser.horizontal-menu:has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible {
-  margin-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
-  margin-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
+  padding-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
+  padding-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
 }
 
 /* Hide background on workspace button when on tab bar */
@@ -63,7 +63,7 @@
   right: var(--arePanelsSetToLeft, 0);
 }
 /* When the panel is hidden contine the border all the way */
-#browser:has(#panels-container[style*="width: 0px;"]) #tabs-container::before {
+#browser:has(#panels-container[style*="width: 0px;"]):not(:has(#tabs-subcontainer.visible)) #tabs-container::before {
   left: var(--arePanelsSetToRight, calc(-1 * var(--GXpanelWidth)));
   right: var(--arePanelsSetToLeft, calc(-1 * var(--GXpanelWidth)));
 }
