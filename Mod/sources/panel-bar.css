@@ -87,3 +87,8 @@
   height: 1px;
   background: linear-gradient(to right, transparent, var(--GXborderColor) 2px, transparent);
 }
+
+/* Center download progress indicator */
+#panels-container .button-toolbar div.progress {
+  left: unset;
+}
