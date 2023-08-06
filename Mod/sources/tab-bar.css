@@ -401,8 +401,9 @@
 }
 
 /* Stylize tab audio playing icon */
-.tab:not(.tab-group) .tab-audio,
-#tabs-container .tab.pinned.audio-on .tab-audio {
+#tabs-tabbar-container .tab .tab-audio,
+#tabs-tabbar-container .tab.pinned.audio-on .tab-audio,
+#tabs-tabbar-container .tab.tab-small.audio-on .tab-audio {
   transform: scale(0.8) !important;
   left: 1px;
   bottom: 0;
@@ -414,23 +415,15 @@
   width: 16px;
 }
 /* keep favicon from disappearing while audio icon is shown */
-.tab:not(.tab-group).audio-on .favicon,
-.tab:not(.tab-group).audio-muted .favicon {
+.tab.audio-on .favicon,
+.tab.audio-muted .favicon {
   transform: scale(1) !important;
 }
-/* give tab groups different style audio icon so it is still easy to click */
-.tab.tab-group .tab-audio {
-  transform: scale(0.833) !important;
-  left: 19px;
-  top: 7px !important;
-}
-.tab.active.tab-group .tab-audio {
-  left: 18px;
-  top: 6.5px !important;
-}
-.tab-group.audio-on .title,
-.tab-group.audio-muted .title {
-  margin-left: 8px;
+/* Shrink audio icon on tab stacks to match shrunk favicon (when compact tab stacks are used) */
+#tabs-tabbar-container .tab.tab-group .tab-audio,
+#tabs-tabbar-container .tab.tab-group.tab-small.audio-on .tab-audio {
+  transform: scale(calc(0.8 * 0.833)) !important;
+  left: 0.833px;
 }
 
 /* Make the tab stack counter blend in with background when the stack is active */
