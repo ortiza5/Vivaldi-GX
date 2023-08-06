@@ -277,6 +277,9 @@ path[d^="M3 4h10v1H3zM3"] {
 .OmniLinkItem .OmniLinkItem-Url {
   margin-left: 10px;
 }
+.OmniLinkItem .OmniLinkItem-Url .OmniLinkItem-Url {
+  margin-left: 0;
+}
 .OmniLinkItem--Highlighted .OmniLinkItem-Url,
 .OmniLinkItem--Highlighted:hover .OmniLinkItem-Url,
 .OmniLinkItem:not(.OmniLinkItem--Highlighted):hover .OmniLinkItem-Url {
