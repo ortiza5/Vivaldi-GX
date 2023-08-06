@@ -413,12 +413,6 @@
   height: 16px;
   width: 16px;
 }
-/* prevent icon from shifting when active */
-.tab:not(.tab-group).active .tab-audio,
-#tabs-container .tab.active.pinned.audio-on .tab-audio {
-  left: 0px;
-  top: 5px !important;
-}
 /* keep favicon from disappearing while audio icon is shown */
 .tab:not(.tab-group).audio-on .favicon,
 .tab:not(.tab-group).audio-muted .favicon {
