@@ -1,4 +1,4 @@
-# ![icon](Icon/Vivladi-GX-Stretched-48.png) Vivaldi GX Revisited (Modified/Updated for 6.1 Edition)
+# ![icon](Assets/icon/Vivladi-GX-Stretched-32.png) Vivaldi GX Revisited (Modified/Updated for 6.1)
 An Opera GX style custom UI mod skin for Vivaldi.
 - Originally created by [@gabevilela](https://forum.vivaldi.net/user/gabevilela) with help from [@tam710562](https://forum.vivaldi.net/user/tam710562) on the Vivaldi Forum and modified/updated to its current form by [@nomadic](https://forum.vivaldi.net/user/nomadic)
 - Thanks to @ for testing this mod through development and helping out with finding bugs and making suggestions
@@ -28,30 +28,30 @@ In this page, click on `Releases`, select a version and download its `Source cod
 - Under `.../Mod/sources/` there is a file `vars.css` that contains several CSS variables that you can modify to change the appearance of this mod
 - **\*\*You should backup this file elsewhere to allow you to easily replace the contents of the `Mod` folder when this mod receives an update\*\***
 - **Definitions**:
-  - **--GXbuttonFill**
+  - **`--GXbuttonFill`**
     - **Default Value**: `var(--colorHighlightBg)`
     - **Purpose**: Sets the color used to fill in the icons of the buttons across the UI
-  - **--GXbuttonBgHover**
+  - **`--GXbuttonBgHover`**
     - **Default Value**: `var(--colorAccentBgDark)`
     - **Purpose**: Sets the background color of buttons when they are hovered 
   - **--GXborderColor**
     - **Default Value**: `var(--colorHighlightBgDark)`
     - **Purpose**: Sets the color of the border that wraps around the perimeter of the UI
-  - **--GXpanelWidth**
+  - **`--GXpanelWidth`**
     - **Default Value**: `40px`
     - **Purpose**: Sets the width of the Panel Bar. Vivaldi's is narrower than Opera GX's by default, so this value increases its width
-  - **--GXaddressFieldSideBorders**
+  - **`--GXaddressFieldSideBorders`**
     - **Default Value**: `⋮`
     - **Purpose**: Sets the side borders that define the edges of the unfocused Address Field. This mod makes the Field blend in with the Address Bar, so this icon is used to make its location more apparent
-  - **--GXaddressBarButtonFill**
+  - **`--GXaddressBarButtonFill`**
     - **Default Value**: `var(--GXbuttonFill)`
     - **Purpose**: Sets the color used to fill the icons of the buttons specifically on the Address Bar. Opera GX has varying icon colors depending on their location in the UI, so this allows you to match that
     - **Suggestion**: Set the variable to `var(--colorAccentFg)` to get the original look of Opera GX
-  - **--GXbookmarkBarButtonFill**
+  - **`--GXbookmarkBarButtonFill`**
     - **Default Value**: `var(--GXbuttonFill)`
     - **Purpose**: Sets the color used to fill the icons of the buttons specifically on the Bookmark Bar. Opera GX has varying icon colors depending on their location in the UI, so this allows you to match that
     - **Suggestion**: Set the variable to `var(--colorAccentFg)` to get the original look of Opera GX
-  - **--GXspeedDialSearchBgColor**
+  - **`--GXspeedDialSearchBgColor`**
     - **Default Value**: `transparent;
     - **Purpose**: Sets the background color of the unfocused Search Field on the Start Page above the Speed Dials
     - **Suggestion**: Set the variable to `var(--colorBg)` to get more contrast behind the Field
