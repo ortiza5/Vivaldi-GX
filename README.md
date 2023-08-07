@@ -11,6 +11,10 @@ An Opera GX style custom UI mod skin for Vivaldi.
 
 ***DISCLAIMER: This mod wasn't developed and/or approved by either Opera Norway AS, or Vivaldi Technologies***
 
+## Preview
+
+![Image showing a Vivaldi window with this mod applied](Assets/preview.jpg)
+
 
 ## How to install?
 
@@ -34,7 +38,7 @@ In this page, click on `Releases`, select a version and download its `Source cod
   - **`--GXbuttonBgHover`**
     - **Default Value**: `var(--colorAccentBgDark)`
     - **Purpose**: Sets the background color of buttons when they are hovered 
-  - **--GXborderColor**
+  - **`--GXborderColor`**
     - **Default Value**: `var(--colorHighlightBgDark)`
     - **Purpose**: Sets the color of the border that wraps around the perimeter of the UI
   - **`--GXpanelWidth`**
