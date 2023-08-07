@@ -1,7 +1,7 @@
 # ![icon](Assets/icon/Vivladi-GX-Stretched-32.png) Vivaldi GX Revisited (Modified/Updated for 6.1)
 An Opera GX style custom UI mod skin for Vivaldi.
 - Originally created by [@gabevilela](https://forum.vivaldi.net/user/gabevilela) with help from [@tam710562](https://forum.vivaldi.net/user/tam710562) on the Vivaldi Forum and modified/updated to its current form by [@nomadic](https://forum.vivaldi.net/user/nomadic)
-- Thanks to @ for testing this mod through development and helping out with finding bugs and making suggestions
+- Thanks to [@beyxnd](https://forum.vivaldi.net/user/beyxnd) for testing this mod through development and helping out with finding bugs and making suggestions
 - Forum link **(original)**: https://forum.vivaldi.net/post/315382
 - Forum link **(new)**:
 
@@ -13,7 +13,7 @@ An Opera GX style custom UI mod skin for Vivaldi.
 
 ## Preview
 
-![Image showing a Vivaldi window with this mod applied](Assets/preview.jpg)
+![Image showing a Vivaldi window with this mod applied](Assets/)
 
 
 ## How to install?
@@ -69,20 +69,20 @@ In this page, click on `Releases`, select a version and download its `Source cod
 
 ## Companion Themes
 
-- **GX Inspired, but with Transparency**
-  - **Made by** - @nomadic
+- **Authentic Opera GX theme for those who like the classic GX look**
+  - **Made by** - [@beyxnd](https://forum.vivaldi.net/user/beyxnd)
+  - **Link for regular windows** - 
+  - **Link for private windows** - 
+  - **Preview** - 
+ 
+     ![Image of the theme ]()
+     
+- **GX inspired, but with transparency**
+  - **Made by** - [@nomadic](https://forum.vivaldi.net/user/nomadic)
   - **Link** - https://themes.vivaldi.net/themes/1LVJ2Z9xJx9
   - **Preview** -
   
-     ![Image of the theme colors](Assets/gx-transparency.png)
-- ...
-  - **Made by** - @
-  - **Link** - 
-  - **Preview** - 
-- ...
-  - **Made by** - @
-  - **Link** - 
-  - **Preview** - 
+     ![Image of the theme ]()
 
 ## Known Limitations
 - **Bar Placement Incompatibilities** - The Address and Tab Bars need to be set to the top position or hidden. I can work to enable these options, but I want to know there is demand before starting the work
