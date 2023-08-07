@@ -13,7 +13,7 @@ An Opera GX style custom UI mod skin for Vivaldi.
 
 ## Preview
 
-![Image showing a Vivaldi window with this mod applied](Assets/)
+![Image showing a Vivaldi window with this mod applied](Assets/preview-shadow.png)
 
 
 ## How to install?
@@ -71,18 +71,20 @@ In this page, click on `Releases`, select a version and download its `Source cod
 
 - **Authentic Opera GX theme for those who like the classic GX look**
   - **Made by** - [@beyxnd](https://forum.vivaldi.net/user/beyxnd)
-  - **Link for regular windows** - 
-  - **Link for private windows** - 
+  - **Link for regular windows** - https://themes.vivaldi.net/themes/rwjvEVGpJAL
+  - **Link for private windows** - https://themes.vivaldi.net/themes/NOb71q9371g
   - **Preview** - 
- 
-     ![Image of the theme ]()
+     | Regular | Private |
+     | ------- | ------- |
+     | ![Image of the theme ](Assets/GX-default-preview.png) | ![Image of the theme ](Assets/GX-private-preview.png) |
      
 - **GX inspired, but with transparency**
   - **Made by** - [@nomadic](https://forum.vivaldi.net/user/nomadic)
   - **Link** - https://themes.vivaldi.net/themes/1LVJ2Z9xJx9
   - **Preview** -
-  
-     ![Image of the theme ]()
+     | Regular | Private |
+     | ------- | ------- |
+     | ![Image of the theme ](Assets/GX-transparency-preview.png) | ![No theme](Assets/GX-unset-preview.png) |
 
 ## Known Limitations
 - **Bar Placement Incompatibilities** - The Address and Tab Bars need to be set to the top position or hidden. I can work to enable these options, but I want to know there is demand before starting the work
