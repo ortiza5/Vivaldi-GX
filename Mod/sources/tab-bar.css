@@ -49,6 +49,10 @@
 .svg-tab-stack {
   display: none;
 }
+/* Fix the border in the bottom corners of active tab stacks */
+.tabs-top .tab-position.is-substack > .tab.active {
+  margin-bottom: 0;
+}
 
 /* For lower border to the left of the active tab */
 #tabs-container,
@@ -182,6 +186,11 @@
 .tabs-bottom .tab-position .tab.insubstrip {
   margin: 0;
 }
+/* Re-center the tab headers */
+.tabs-top .tab-position .tab.insubstrip .tab-header, 
+.tabs-bottom .tab-position .tab.insubstrip .tab-header {
+  margin: 0;
+}
 
 /* Border on the left of the 2nd level tab bar */
 #tabs-subcontainer .tab-strip {
@@ -251,6 +260,11 @@
 /* Hide default unread indicator */
 .tab-position .tab.unread {
   background-image: unset;
+}
+
+/* Re-center tab content */
+.tab-position .tab .tab-header {
+  flex: 0 0 27px;
 }
 
 /* Cut off top left corner of tab and draw border along the edge */
@@ -325,6 +339,10 @@
   padding-bottom: 5px;
   padding-left: 3px;
 }
+/* Re-align tile to look more centered (like in Opera and other browsers) */
+.tab-position .tab .title {
+  margin-bottom: -1px;
+}
 
 /* Hide backdrop behind active tab's favicon */
 .transparent-tabbar .tab-position .tab.active .tab-header .favicon:not(.svg),
@@ -381,7 +399,7 @@
   top: 70px !important;
 }
 
-/* Stylize net tab button */
+/* Stylize new tab button */
 .newtab button svg > path {
   d: path("M26,11.818H14.214a.032.032,0,0,1-.032-.032V0H11.818V11.786a.032.032,0,0,1-.032.032H0v2.364H11.786a.032.032,0,0,1,.032.032V26h2.364V14.214a.032.032,0,0,1,.032-.032H26Z");
 }
@@ -430,10 +448,14 @@
 .stack-counter {
   background-color: var(--GXbuttonFill) !important;
   color: var(--colorHighlightFg) !important;
+  padding-top: 2px !important;
+
 }
 .tab.active .stack-counter {
   background-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFg) !important;
+  padding-top: 2px !important;
+
 }
 #browser.color-behind-tabs-on .tab.active .stack-counter {
   background-color: var(--colorBg) !important;

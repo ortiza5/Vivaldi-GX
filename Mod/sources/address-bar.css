@@ -1,5 +1,5 @@
 /* Remove border under/above address bar */
-.address-top .mainbar > .toolbar-mainbar {
+.address-top .mainbar, .address-top .mainbar > .toolbar-mainbar {
   border-bottom: unset;
 }
 .address-bottom .mainbar > .toolbar-mainbar {
@@ -101,11 +101,16 @@
 .mainbar > .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
   background-color: var(--colorAccentBgFadedMore);
 }
+/* Remove the outline */
+.SearchField:focus-within, .UrlBar-AddressField:focus-within {
+  outline: 2px solid transparent !important;
+}
 
 /* Give more space for URL */
+/* Prevent URL from shifting when focused*/
 .UrlBar-UrlFieldWrapper .observer .UrlField input,
 .UrlBar-UrlFieldWrapper .UrlField .UrlFragment-Wrapper {
-  padding-top: 5px;
+  padding-bottom: 4px;
   padding-left: 18px;
 }
 
@@ -142,6 +147,7 @@ path[d^="M3 4h10v1H3zM3"] {
 
 /* Stylize extension badges */
 .toolbar-extensions .button-badge {
+  background-color: var(--colorBg) !important;
   border-radius: var(--radiusHalf);
   box-shadow: none;
   height: 12px;
@@ -183,7 +189,12 @@ path[d^="M3 4h10v1H3zM3"] {
   background-color: hsla(0, 0%, 100%, 0.15) !important;
 }
 .UrlBar-AddressField .BookmarkButton > .button-toolbar button:hover {
-  background-color: hsla(0, 0%, 100%, 0.15) !important;
+  background-color: transparent !important;
+}
+/* Hide borders */
+.button-toolbar > button, 
+.BookmarkButton:hover {
+  border-color: transparent !important;
 }
 
 /* Make buttons in address field slightly smaller */
@@ -208,8 +219,8 @@ path[d^="M3 4h10v1H3zM3"] {
 }
 .SiteInfoButton.secure,
 .SiteInfoButton.certified {
-  fill: var(--colorAccentFg);
-  color: var(--colorAccentFg);
+  fill: var(--GXbuttonFill);
+  color: var(--GXbuttonFill);
 }
 .button-addressfield.SiteInfoButton.internal svg {
   fill: var(--GXbuttonFill);
@@ -246,8 +257,8 @@ path[d^="M3 4h10v1H3zM3"] {
 /* Stylize the dropdown menues of the fields */
 :not(.SpeedDialView-SearchField) > .OmniDropdown {
   background-color: var(--colorAccentBgFadedMore);
-  border-bottom-left-radius: var(--radiusHalf);
-  border-bottom-right-radius: var(--radiusHalf);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
   /* border-bottom: 2px solid var(--colorAccentBgFadedMost);
   border-left: 2px solid var(--colorAccentBgFadedMost);
   border-right: 2px solid var(--colorAccentBgFadedMost); */
@@ -364,10 +375,6 @@ progress.pageload-indicator {
   border: 2px solid var(--colorAccentBgFadedMost);
   border-top: unset;
 }
-#main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul:before,
-.SearchField-Popup nav.menu > ul:before {
-  /* content: unset; */
-}
 #main .SearchField:not(.SpeedDialView-SearchField) nav.menu > ul > li,
 .SearchField-Popup nav.menu > ul > li {
   padding: 0px 5px;
@@ -416,9 +423,9 @@ progress.pageload-indicator {
   top: -1px;
 }
 
-/* Make hidden extension toggle background match the extension icons' */
+/* Make hidden extension toggle background match the extension icons' [REVERTED]*/
 .color-behind-tabs-off .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
-  background-color: var(--colorAccentBgDark);
+  background-color: var(--colorAccentBg);
 }
 .color-behind-tabs-on .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
   background-color: var(--colorBgDark);
