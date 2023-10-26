@@ -266,10 +266,6 @@
 .tab-position .tab .tab-header {
   flex: 0 0 27px;
 }
-/* Re-align title to look more centered (like in Opera and other browsers) */
-.tab-position .tab .title {
-  margin-bottom: -1px;
-}
 
 /* Cut off top left corner of tab and draw border along the edge */
 #tabs-container .tab:not(.tab-group) {

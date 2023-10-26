@@ -24,10 +24,6 @@
 .bookmark-bar button:not(.chevron):before {
   content: unset;
 }
-/* Align titles to look more centered (like Opera and other browsers) */
-.bookmark-bar button .title {
-  margin-bottom: -1px;
-}
 
 /* Space out the bookmarks a bit more */
 .bookmark-bar .observer {
