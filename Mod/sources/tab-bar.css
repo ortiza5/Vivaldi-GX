@@ -266,7 +266,7 @@
 .tab-position .tab .tab-header {
   flex: 0 0 27px;
 }
-/* Re-align tile to look more centered (like in Opera and other browsers) */
+/* Re-align title to look more centered (like in Opera and other browsers) */
 .tab-position .tab .title {
   margin-bottom: -1px;
 }
