@@ -49,7 +49,8 @@
 .svg-tab-stack {
   display: none;
 }
-/* Fix the border in the bottom corners of active tab stacks */
+
+/* Fix the border in the bottom corners of active tab stacks when not using the compact view */
 .tabs-top .tab-position.is-substack > .tab.active {
   margin-bottom: 0;
 }
@@ -186,11 +187,6 @@
 .tabs-bottom .tab-position .tab.insubstrip {
   margin: 0;
 }
-/* Re-center the tab headers */
-.tabs-top .tab-position .tab.insubstrip .tab-header, 
-.tabs-bottom .tab-position .tab.insubstrip .tab-header {
-  margin: 0;
-}
 
 /* Border on the left of the 2nd level tab bar */
 #tabs-subcontainer .tab-strip {
@@ -262,9 +258,17 @@
   background-image: unset;
 }
 
-/* Re-center tab content */
+/* Re-center the tab headers */
+.tabs-top .tab-position .tab.insubstrip .tab-header,
+.tabs-bottom .tab-position .tab.insubstrip .tab-header {
+  margin: 0;
+}
 .tab-position .tab .tab-header {
   flex: 0 0 27px;
+}
+/* Re-align tile to look more centered (like in Opera and other browsers) */
+.tab-position .tab .title {
+  margin-bottom: -1px;
 }
 
 /* Cut off top left corner of tab and draw border along the edge */
@@ -338,10 +342,6 @@
   padding-top: 7px;
   padding-bottom: 5px;
   padding-left: 3px;
-}
-/* Re-align tile to look more centered (like in Opera and other browsers) */
-.tab-position .tab .title {
-  margin-bottom: -1px;
 }
 
 /* Hide backdrop behind active tab's favicon */
@@ -449,13 +449,11 @@
   background-color: var(--GXbuttonFill) !important;
   color: var(--colorHighlightFg) !important;
   padding-top: 2px !important;
-
 }
 .tab.active .stack-counter {
   background-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFg) !important;
   padding-top: 2px !important;
-
 }
 #browser.color-behind-tabs-on .tab.active .stack-counter {
   background-color: var(--colorBg) !important;
