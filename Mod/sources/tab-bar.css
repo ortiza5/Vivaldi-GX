@@ -510,3 +510,8 @@
 .tab-indicator:last-of-type {
   border-top-right-radius: unset;
 }
+
+/* Make the workspace button match the background when transparent tab bar is used */
+.transparent-tabbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+  backdrop-filter: unset;
+}
