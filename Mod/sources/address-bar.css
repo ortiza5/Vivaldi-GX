@@ -1,5 +1,5 @@
 /* Remove border under/above address bar */
-.address-top .mainbar, .address-top .mainbar > .toolbar-mainbar {
+.address-top .mainbar {
   border-bottom: unset;
 }
 .address-bottom .mainbar > .toolbar-mainbar {
@@ -101,8 +101,10 @@
 .mainbar > .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
   background-color: var(--colorAccentBgFadedMore);
 }
-/* Remove the outline */
-.SearchField:focus-within, .UrlBar-AddressField:focus-within {
+
+/* Remove the outline around the address and search fields when in use */
+.SearchField:focus-within,
+.UrlBar-AddressField:focus-within {
   outline: 2px solid transparent !important;
 }
 
@@ -191,8 +193,8 @@ path[d^="M3 4h10v1H3zM3"] {
 .UrlBar-AddressField .BookmarkButton > .button-toolbar button:hover {
   background-color: transparent !important;
 }
-/* Hide borders */
-.button-toolbar > button, 
+/* Hide their borders on hover */
+.button-toolbar > button,
 .BookmarkButton:hover {
   border-color: transparent !important;
 }
@@ -421,12 +423,4 @@ progress.pageload-indicator {
 .mainbar > .toolbar-mainbar > .button-toolbar:not(.profile-popup),
 .mainbar > .toolbar-mainbar > .toolbar-extensions .button-toolbar {
   top: -1px;
-}
-
-/* Make hidden extension toggle background match the extension icons' [REVERTED]*/
-.color-behind-tabs-off .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
-  background-color: var(--colorAccentBg);
-}
-.color-behind-tabs-on .toolbar-extensions:has(.ExtensionIcon--Hidden) > .button-toolbar:last-of-type {
-  background-color: var(--colorBgDark);
 }
