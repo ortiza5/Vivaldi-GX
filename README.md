@@ -44,6 +44,7 @@ In this page, click on [`Releases`](https://github.com/ortiza5/Vivaldi-GX/releas
   - **`--GXpanelWidth`**
     - **Default Value**: `40px`
     - **Purpose**: Sets the width of the Panel Bar. Vivaldi's is narrower than Opera GX's by default, so this value increases its width
+    - **Range**: Shouldn't go below `34px`, but can go as wide as you want above that
   - **`--GXaddressFieldSideBorders`**
     - **Default Value**: `⋮`
     - **Purpose**: Sets the side borders that define the edges of the unfocused Address Field. This mod makes the Field blend in with the Address Bar, so this icon is used to make its location more apparent

@@ -2,6 +2,7 @@
   --GXbuttonFill: var(--colorHighlightBg);
   --GXbuttonBgHover: var(--colorAccentBgDark);
   --GXborderColor: var(--colorHighlightBgDark);
+  /* Minimum width allowed is 34px */
   --GXpanelWidth: 40px;
   --GXaddressFieldSideBorders: "⋮";
   /* Set the 2 variables below to "var(--colorAccentFg)" to get the original look of Opera GX */
