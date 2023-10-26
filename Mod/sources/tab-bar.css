@@ -448,12 +448,12 @@
 .stack-counter {
   background-color: var(--GXbuttonFill) !important;
   color: var(--colorHighlightFg) !important;
-  padding-top: 2px !important;
+  margin-top: 2px !important;
 }
 .tab.active .stack-counter {
   background-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFg) !important;
-  padding-top: 2px !important;
+  margin-top: 2px !important;
 }
 #browser.color-behind-tabs-on .tab.active .stack-counter {
   background-color: var(--colorBg) !important;
