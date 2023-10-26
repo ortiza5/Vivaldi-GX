@@ -261,12 +261,8 @@ path[d^="M3 4h10v1H3zM3"] {
   background-color: var(--colorAccentBgFadedMore);
   border-bottom-left-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
-  /* border-bottom: 2px solid var(--colorAccentBgFadedMost);
-  border-left: 2px solid var(--colorAccentBgFadedMost);
-  border-right: 2px solid var(--colorAccentBgFadedMost); */
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  border: 2px solid var(--colorAccentBgFadedMost);
   border-top: unset;
   box-shadow: unset;
   color: var(--colorAccentFg);
