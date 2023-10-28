@@ -29,6 +29,11 @@
   width: var(--GXpanelWidth);
 }
 
+/* Remove expand arrow next to the Vivaldi icon */
+.vivaldi .expand-arrow {
+  display: none;
+}
+
 /* Stylize Vivaldi menu button */
 .vivaldi svg > path:nth-child(1) {
   fill: var(--GXbuttonFill) !important;

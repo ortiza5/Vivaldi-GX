@@ -6,7 +6,7 @@
   background-color: var(--colorAccentBgDark);
   color: var(--colorAccentFg);
 }
-.button-popup:not(:has(.SearchField)) header,
+.button-popup:not(:has(.SearchField)):not(:has(.downloads)) header,
 .button-popup:not(:has(.SearchField)) footer,
 .BookmarkPopup .dialog-header,
 .BookmarkPopup .dialog-footer,
@@ -29,7 +29,7 @@
 
 /* Buttons */
 .button-popup:not(:has(.SearchField)) input,
-.button-popup:not(:has(.SearchField)) button,
+.button-popup:not(:has(.SearchField)) button:not(.SlideBar),
 .button-popup:not(:has(.SearchField)) textarea {
   background-color: var(--colorAccentBgDarker) !important;
   border-color: var(--colorAccentBg) !important;

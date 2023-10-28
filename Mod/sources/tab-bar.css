@@ -50,6 +50,11 @@
   display: none;
 }
 
+/* Fix the border in the bottom corners of active tab stacks when not using the compact view */
+.tabs-top .tab-position.is-substack > .tab.active {
+  margin-bottom: 0;
+}
+
 /* For lower border to the left of the active tab */
 #tabs-container,
 #tabs-subcontainer {
@@ -253,6 +258,15 @@
   background-image: unset;
 }
 
+/* Re-center the tab headers */
+.tabs-top .tab-position .tab.insubstrip .tab-header,
+.tabs-bottom .tab-position .tab.insubstrip .tab-header {
+  margin: 0;
+}
+.tab-position .tab .tab-header {
+  flex: 0 0 27px;
+}
+
 /* Cut off top left corner of tab and draw border along the edge */
 #tabs-container .tab:not(.tab-group) {
   clip-path: polygon(6.5px 0%, 100% 0, 100% 100%, 0 100%, 0% 6.5px);
@@ -381,7 +395,7 @@
   top: 70px !important;
 }
 
-/* Stylize net tab button */
+/* Stylize new tab button */
 .newtab button svg > path {
   d: path("M26,11.818H14.214a.032.032,0,0,1-.032-.032V0H11.818V11.786a.032.032,0,0,1-.032.032H0v2.364H11.786a.032.032,0,0,1,.032.032V26h2.364V14.214a.032.032,0,0,1,.032-.032H26Z");
 }
@@ -430,10 +444,12 @@
 .stack-counter {
   background-color: var(--GXbuttonFill) !important;
   color: var(--colorHighlightFg) !important;
+  margin-top: 2px !important;
 }
 .tab.active .stack-counter {
   background-color: var(--colorAccentBg) !important;
   color: var(--colorAccentFg) !important;
+  margin-top: 2px !important;
 }
 #browser.color-behind-tabs-on .tab.active .stack-counter {
   background-color: var(--colorBg) !important;
@@ -489,4 +505,9 @@
 }
 .tab-indicator:last-of-type {
   border-top-right-radius: unset;
+}
+
+/* Make the workspace button match the background when transparent tab bar is used */
+.transparent-tabbar .button-toolbar.workspace-popup.tabbar-workspace-button {
+  backdrop-filter: unset;
 }
