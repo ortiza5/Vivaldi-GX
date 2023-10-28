@@ -2,7 +2,7 @@
 An Opera GX style custom UI mod skin for Vivaldi.
 - Originally created by [@gabevilela](https://forum.vivaldi.net/user/gabevilela) with help from [@tam710562](https://forum.vivaldi.net/user/tam710562) on the Vivaldi Forum and modified/updated to its current form by [@nomadic](https://forum.vivaldi.net/user/nomadic)
 - Thanks to [@beyxnd](https://forum.vivaldi.net/user/beyxnd) for testing this mod through development and helping out with finding bugs and making suggestions
-- Contributions from by [@gomizilla](https://forum.vivaldi.net/user/gomizilla) and [@beyxnd](https://forum.vivaldi.net/user/beyxnd)
+- Contributions from [@gomizilla](https://forum.vivaldi.net/user/gomizilla) and [@beyxnd](https://forum.vivaldi.net/user/beyxnd)
 - Forum link **(original)**: https://forum.vivaldi.net/post/315382
 - Forum link **(new)**: https://forum.vivaldi.net/post/686366
 
