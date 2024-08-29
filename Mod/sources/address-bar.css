@@ -311,7 +311,7 @@ span.OmniLinkItem-Details {
 .OmniLinkItem-Favicon {
   height: 28px;
   width: 28px;
-  padding: 6px;
+  padding: 6px 0;
 }
 .OmniLinkItem-EraseButton {
   margin-left: 6px;
