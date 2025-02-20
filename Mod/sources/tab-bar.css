@@ -51,7 +51,7 @@
 }
 
 /* Fix the border in the bottom corners of active tab stacks when not using the compact view */
-.tabs-top .tab-position.is-substack > .tab.active {
+.tabs-top .tab-position.is-substack .tab.active {
   margin-bottom: 0;
 }
 
@@ -122,8 +122,8 @@
 
 /* Have gradient lower border to the right of the active tab */
 /* Different lengths depending on the number of tabs */
-#tabs-container:not([style*="flex-grow: 0;"]) .tab-position.tab-position:has(> .tab.active)::after,
-#tabs-subcontainer .tab-position:has(> .tab.active)::after {
+#tabs-container:not([style*="flex-grow: 0;"]) .tab-position.tab-position:has(.tab.active)::after,
+#tabs-subcontainer .tab-position:has(.tab.active)::after {
   --modLineWidth: 25vw;
   content: " ";
   position: absolute;
@@ -133,37 +133,37 @@
   width: var(--modLineWidth);
   background-image: linear-gradient(to right, var(--GXborderColor), transparent);
 }
-.tab-strip > span:nth-child(1) > .tab-position:has(> .tab.active)::after,
-.tab-strip > span:nth-child(2) > .tab-position:has(> .tab.active)::after {
+.tab-strip > span:nth-child(1) > .tab-position:has(.tab.active)::after,
+.tab-strip > span:nth-child(2) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 50vw !important;
 }
-.tab-strip > span:nth-child(3) > .tab-position:has(> .tab.active)::after {
+.tab-strip > span:nth-child(3) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 40vw !important;
 }
-.tab-strip > span:nth-child(4) > .tab-position:has(> .tab.active)::after {
+.tab-strip > span:nth-child(4) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 35vw !important;
 }
-.tab-strip > span:nth-child(5) > .tab-position:has(> .tab.active)::after {
+.tab-strip > span:nth-child(5) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 30vw !important;
 }
 /* Flip for panelson the right */
-#browser:has(#panels-container.right) #tabs-container:not([style*="flex-grow: 0;"]) .tab-position.tab-position:has(> .tab.active)::after,
-#browser:has(#panels-container.right) #tabs-subcontainer .tab-position:has(> .tab.active)::after {
+#browser:has(#panels-container.right) #tabs-container:not([style*="flex-grow: 0;"]) .tab-position.tab-position:has(.tab.active)::after,
+#browser:has(#panels-container.right) #tabs-subcontainer .tab-position:has(.tab.active)::after {
   --modLineWidth: 50vw;
   left: calc(calc(var(--modLineWidth) - 1px) * -1);
   background-image: linear-gradient(to left, var(--GXborderColor), transparent);
 }
-#browser:has(#panels-container.right) .tab-strip > span:nth-child(1) > .tab-position:has(> .tab.active)::after,
-#browser:has(#panels-container.right) .tab-strip > span:nth-child(2) > .tab-position:has(> .tab.active)::after {
+#browser:has(#panels-container.right) .tab-strip > span:nth-child(1) > .tab-position:has(.tab.active)::after,
+#browser:has(#panels-container.right) .tab-strip > span:nth-child(2) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 30vw !important;
 }
-#browser:has(#panels-container.right) .tab-strip > span:nth-child(3) > .tab-position:has(> .tab.active)::after {
+#browser:has(#panels-container.right) .tab-strip > span:nth-child(3) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 35vw !important;
 }
-#browser:has(#panels-container.right) .tab-strip > span:nth-child(4) > .tab-position:has(> .tab.active)::after {
+#browser:has(#panels-container.right) .tab-strip > span:nth-child(4) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 40vw !important;
 }
-#browser:has(#panels-container.right) .tab-strip > span:nth-child(5) > .tab-position:has(> .tab.active)::after {
+#browser:has(#panels-container.right) .tab-strip > span:nth-child(5) > .tab-position:has(.tab.active)::after {
   --modLineWidth: 50vw !important;
 }
 
@@ -466,7 +466,7 @@
 }
 
 /* Remove corner rounding from corners of tabs */
-.tab-position > .tab.active {
+.tab-position .tab.active {
   border-radius: unset !important;
   margin-bottom: 0;
 }
