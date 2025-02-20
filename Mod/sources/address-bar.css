@@ -2,7 +2,7 @@
 .address-top .mainbar {
   border-bottom: unset;
 }
-.address-bottom .mainbar > .toolbar-mainbar {
+.address-bottom .mainbar .toolbar-mainbar {
   border-top: unset;
 }
 
@@ -26,7 +26,7 @@
 }
 
 /* Border next to continued panel bar if the address bar is set to the top */
-#browser.address-top:has(#panels-container:not([style*="width: 0px;"])) .mainbar > .toolbar-mainbar {
+#browser.address-top:has(#panels-container:not([style*="width: 0px;"])) .mainbar .toolbar-mainbar {
   border-left: var(--arePanelsSetToRight, 1px solid var(--GXborderColor)) !important;
   border-right: var(--arePanelsSetToLeft, 1px solid var(--GXborderColor)) !important;
 }
@@ -62,7 +62,7 @@
 } */
 
 /* .UrlBar-AddressField .button-toolbar > button:active,
-.mainbar > .toolbar-mainbar > .button-toolbar > button.button-pressed {
+.mainbar .toolbar-mainbar > .button-toolbar > button.button-pressed {
   background-color: var(--colorBgAlphaHeavier) !important;
   background-image: none !important;
 } */
@@ -77,28 +77,28 @@
 /* Make the text fields blend in with the address bar */
 .UrlBar-AddressField,
 .UrlBar-SearchField,
-.mainbar > .toolbar-mainbar .SearchField-Popup .SearchField {
+.mainbar .toolbar-mainbar .SearchField-Popup .SearchField {
   background-color: var(--colorAccentBg);
   border: unset !important;
   height: 29px;
 }
 .color-behind-tabs-on .UrlBar-AddressField,
 .color-behind-tabs-on .UrlBar-SearchField,
-.color-behind-tabs-on .mainbar > .toolbar-mainbar .SearchField-Popup .SearchField {
+.color-behind-tabs-on .mainbar .toolbar-mainbar .SearchField-Popup .SearchField {
   background-color: var(--colorBg);
 }
 
 /* Give fields slight background on hover */
 .UrlBar-AddressField:hover,
 .UrlBar-SearchField:hover,
-.mainbar > .toolbar-mainbar .SearchField-Popup .SearchField:hover {
+.mainbar .toolbar-mainbar .SearchField-Popup .SearchField:hover {
   background-color: var(--colorHighlightBgAlpha);
 }
 
 /* Give fields a distinctive background when in use */
 .UrlBar-AddressField:focus-within,
 .UrlBar-SearchField:focus-within,
-.mainbar > .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
+.mainbar .toolbar-mainbar .SearchField-Popup .SearchField:focus-within {
   background-color: var(--colorAccentBgFadedMore);
 }
 
@@ -142,7 +142,7 @@ path[d^="M3 4h10v1H3zM3"] {
 /* Change text selection color of fields */
 .url::selection,
 .UrlBar-SearchField .searchfield-input::selection,
-.mainbar > .toolbar-mainbar .SearchField-Popup .searchfield-input::selection {
+.mainbar .toolbar-mainbar .SearchField-Popup .searchfield-input::selection {
   background-color: var(--colorHighlightBg) !important;
   color: var(--colorHighlightFg) !important;
 }
@@ -248,11 +248,11 @@ path[d^="M3 4h10v1H3zM3"] {
 }
 
 /* Search field item alignment */
-.mainbar > .toolbar-mainbar .searchfield-input,
-.mainbar > .toolbar-mainbar .SearchField-Popup .searchfield-input {
+.mainbar .toolbar-mainbar .searchfield-input,
+.mainbar .toolbar-mainbar .SearchField-Popup .searchfield-input {
   margin-top: -2px;
 }
-.mainbar > .toolbar-mainbar .toolbar-insideinput.SearchEngineSelect-Icon {
+.mainbar .toolbar-mainbar .toolbar-insideinput.SearchEngineSelect-Icon {
   margin-left: 6px;
 }
 
@@ -295,7 +295,7 @@ path[d^="M3 4h10v1H3zM3"] {
   color: var(--colorHighlightFg) !important;
 }
 .UrlBar-SearchField .OmniLinkItem,
-.mainbar > .toolbar-mainbar .SearchField-Popup .OmniLinkItem {
+.mainbar .toolbar-mainbar .SearchField-Popup .OmniLinkItem {
   grid-template-columns: [Url] 1fr [Details] 1fr [Erase] var(--item-height);
 }
 /* .ignore-react-onclickoutside.OmniDropdown::-webkit-scrollbar {
@@ -410,13 +410,13 @@ progress.pageload-indicator {
 }
 
 /* Add slight padding to the side opposite the panels */
-#browser.address-top .mainbar > .toolbar-mainbar {
+#browser.address-top .mainbar .toolbar-mainbar {
   padding-left: var(--arePanelsSetToLeft, 5px);
   padding-right: var(--arePanelsSetToRight, 5px);
 }
 
 /* Shift address bar buttons up a bit */
-.mainbar > .toolbar-mainbar > .button-toolbar:not(.profile-popup),
-.mainbar > .toolbar-mainbar > .toolbar-extensions .button-toolbar {
+.mainbar .toolbar-mainbar > .button-toolbar:not(.profile-popup),
+.mainbar .toolbar-mainbar > .toolbar-extensions .button-toolbar {
   top: -1px;
 }
