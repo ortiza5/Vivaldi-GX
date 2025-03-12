@@ -83,9 +83,9 @@
 #tabs-container .tab-position:has(.tab.active)::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: var(--arePanelsSetToLeft, 0);
-  height: 1px;
+  height: 2px;
   width: 100vw;
   background: var(--colorAccentBg);
 }
