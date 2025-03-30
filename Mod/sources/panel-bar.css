@@ -34,10 +34,11 @@
 }
 
 /* Wrap border around expanded panels */
-.panel-group {
+/* 35px is width of visible but collapsed panel bar */
+#panels-container:not([style*="width: 35px;"]) .panel-group {
   border-image: var(--GXborderGradient);
 }
-.panel-group::before {
+#panels-container:not([style*="width: 35px;"]) .panel-group::before {
   content: "";
   position: absolute;
   width: 100%;

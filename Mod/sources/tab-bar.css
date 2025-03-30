@@ -78,6 +78,9 @@
   left: var(--arePanelsSetToRight, calc(-1 * var(--GXpanelWidth)));
   right: var(--arePanelsSetToLeft, calc(-1 * var(--GXpanelWidth)));
 }
+#browser:not(.tabs-top):not(.tabs-bottom) #tabs-container::before {
+  content: unset;
+}
 
 /* Cover up the lower border to the right of the active tab */
 #tabs-container .tab-position:has(.tab.active)::before {
