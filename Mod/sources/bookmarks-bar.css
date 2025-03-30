@@ -52,3 +52,15 @@
 .bookmarkbarItem:hover {
   background-color: var(--GXbuttonBgHover) !important;
 }
+
+/* No side margin if tabs aren't set to the top */
+#browser:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+  & .bookmark-bar {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  &.bookmark-bar-top .bookmark-bar {
+    border-left: unset !important;
+    border-right: unset !important;
+  }
+}

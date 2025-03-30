@@ -25,6 +25,27 @@
   z-index: 0;
 }
 
+/* Stop the panel bar from extending upwards if tab bar isn't at the top */
+#browser:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+  --addressBarHeight: 46px;
+  --bookmarkBarHeight: 29px;
+  --titleBarHeight: 30px;
+
+  &.address-top {
+    &:not(.bookmark-bar-top) .mainbar::before {
+      top: var(--addressBarHeight);
+    }
+    &.bookmark-bar-top .mainbar::before {
+      top: calc(var(--addressBarHeight) + var(--bookmarkBarHeight));
+    }
+  }
+  &:not(.address-top) {
+    &.bookmark-bar-top .mainbar::before {
+      top: calc(var(--bookmarkBarHeight) + var(--titleBarHeight));
+    }
+  }
+}
+
 /* Border next to continued panel bar if the address bar is set to the top */
 #browser.address-top:has(#panels-container:not([style*="width: 0px;"])) .mainbar .toolbar-mainbar {
   border-left: var(--arePanelsSetToRight, 1px solid var(--GXborderColor)) !important;
@@ -419,4 +440,16 @@ progress.pageload-indicator {
 .mainbar .toolbar-mainbar > .button-toolbar:not(.profile-popup),
 .mainbar .toolbar-mainbar > .toolbar-extensions .button-toolbar {
   top: -1px;
+}
+
+/* No side margin if tabs aren't set to the top */
+#browser.address-top:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+  & .mainbar {
+    margin-left: unset;
+    margin-right: unset;
+  }
+  & .mainbar .toolbar-mainbar {
+    border-left: unset !important;
+    border-right: unset !important;
+  }
 }
