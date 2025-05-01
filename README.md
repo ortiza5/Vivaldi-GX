@@ -21,11 +21,13 @@ An Opera GX style custom UI mod skin for Vivaldi.
 
 1. **Enable CSS modifications** *(You need to do this only once)*</br>
 Go in `vivaldi://experiments` and check `Allow for using CSS modifications`
-2. **Download the mod**</br>
+2. **Required Setting**</br>
+Go to `vivaldi://settings/appearance/` and set `User Interface Density` to `Compact`.
+3. **Download the mod**</br>
 In this page, click on [`Releases`](https://github.com/ortiza5/Vivaldi-GX/releases), select a version and download the specified `ZIP`
-3. Extract the `Mod` folder to anywhere safe on your PC, like the Documents folder
-4. Open Vivaldi Settings > Appearance and in "Custom UI Modifications", select the downloaded `Mod` folder
-5. Restart Vivaldi (you can easily do this by going in `vivaldi://restart`)
+4. Extract the `Mod` folder to anywhere safe on your PC, like the Documents folder
+5. Open Vivaldi Settings > Appearance and in "Custom UI Modifications", select the downloaded `Mod` folder
+6. Restart Vivaldi (you can easily do this by going in `vivaldi://restart`)
 
 ## Configuration
 
