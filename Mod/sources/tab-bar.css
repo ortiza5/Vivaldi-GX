@@ -363,6 +363,11 @@
   box-shadow: unset !important;
 }
 
+/* Remove vertical scroll bar from 2nd level tab bar */
+.subcontainer-lock {
+  padding-bottom: unset;
+}
+
 /* Stylize tab popup tooltips */
 #vivaldi-tooltip .tooltip .tooltip-item {
   background-color: var(--colorAccentBg);
