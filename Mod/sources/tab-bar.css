@@ -519,3 +519,8 @@
 .transparent-tabbar .button-toolbar.workspace-popup.tabbar-workspace-button {
   backdrop-filter: unset;
 }
+
+/* Force tab bar background to match transparency */
+.transparent-tabbar:not(.color-accent-from-page.color-behind-tabs-on)#browser.tabs-top #header {
+  backdrop-filter: unset;
+}
