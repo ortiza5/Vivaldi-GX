@@ -407,7 +407,7 @@
 .newtab button svg > path {
   d: path("M26,11.818H14.214a.032.032,0,0,1-.032-.032V0H11.818V11.786a.032.032,0,0,1-.032.032H0v2.364H11.786a.032.032,0,0,1,.032.032V26h2.364V14.214a.032.032,0,0,1,.032-.032H26Z");
 }
-.toolbar-tabbar .button-toolbar.newtab button svg {
+.button-toolbar.newtab button .button-icon svg {
   height: 11px;
   width: 11px;
   color: var(--GXbuttonFill);
@@ -415,10 +415,10 @@
 #tabs-container[style*="flex-grow: 0;"] .newtab button svg {
   color: var(--colorFg) !important;
 }
-.toolbar-tabbar .button-toolbar.newtab button {
+.button-toolbar.newtab button {
   opacity: 1;
 }
-.toolbar-tabbar .button-toolbar.newtab button:hover {
+.button-toolbar.newtab button:hover {
   background-color: var(--colorHighlightBgAlpha);
 }
 
