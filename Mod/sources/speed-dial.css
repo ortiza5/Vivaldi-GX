@@ -99,24 +99,24 @@
 }
 
 /* Cut dial corners */
-.dials.speeddial div.dial {
+.SpeedDial--Thumbnail {
   --modClipPath1: 12%;
   --modClipPath2: 88%;
   clip-path: polygon(var(--modClipPath1) 0, 100% 0, 100% var(--modClipPath2), var(--modClipPath2) 100%, 0 100%, 0 var(--modClipPath1));
 }
 /* Give consistent border along cut corners */
-.dials.speeddial div.dial.folder .Mini-Thumbnail:first-of-type {
+.SpeedDial--Thumbnail.folder .Mini-Thumbnail:first-of-type {
   clip-path: polygon(22.3% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
 }
-.dials.speeddial div.dial .thumbnail-title {
+.SpeedDial--Thumbnail .thumbnail-title {
   clip-path: polygon(0 0, 100% 0, 100% 0%, 79% 100%, 0 100%);
 }
 /* Prevent title from going into cut area */
-.dials.speeddial div.dial .thumbnail-title button {
+.SpeedDial--Thumbnail .thumbnail-title button {
   padding-right: 14px;
 }
 /* Fill top left corner for focus indicator */
-.dials.speeddial .dial:focus-visible::before {
+.SpeedDial--Thumbnail:focus-visible::before {
   content: "";
   position: absolute;
   top: 0;
@@ -124,14 +124,23 @@
   height: 100%;
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0);
   pointer-events: none;
+  z-index: 1;
+}
+/* Fix focus indicator outline */
+.SpeedDial--Thumbnail:focus-visible {
+  outline: 2px solid var(--colorHighlightBg);
+  outline-offset: -2px;
+}
+.SpeedDial--Thumbnail:focus-visible .thumbnail-image img {
+  z-index: -1;
 }
 /* Folder needs border for bottom right cut corner */
-.dials.speeddial .dial:focus-visible::before {
+.SpeedDial--Thumbnail:focus-visible::before {
   background-image: linear-gradient(135deg, var(--colorHighlightBg) 9.6%, transparent 0, transparent 93.5%, var(--colorHighlightBg) 0);
 }
-.dials .dial .button-title {
+.SpeedDial .thumbnail-title {
   color: var(--colorFgIntense);
 }
-.dials .dial:focus-within .editable-title-container .button-title {
+.SpeedDial:focus-within .editable-title-container .thumbnail-title {
   color: var(--colorFgIntense) !important;
 }
