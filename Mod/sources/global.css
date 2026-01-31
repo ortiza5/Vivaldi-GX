@@ -61,6 +61,11 @@
   background-color: var(--GXbuttonBgHover) !important;
 }
 
+/* Fix window control buttons positioning in non-maximized windows */
+#browser.win .window-buttongroup {
+  position: fixed;
+}
+
 /* Give way to make address bar buttons a different color */
 .mainbar .button-toolbar > button {
   color: var(--GXaddressBarButtonFill) !important;
