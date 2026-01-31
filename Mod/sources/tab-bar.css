@@ -115,7 +115,7 @@
 #tabs-subcontainer .tab-position:has(.tab.active)::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: var(--arePanelsSetToRight, var(--Width));
   left: var(--arePanelsSetToLeft, var(--Width));
   height: 1px;
@@ -130,7 +130,7 @@
   --modLineWidth: 25vw;
   content: " ";
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: calc(calc(var(--modLineWidth) - 1px) * -1);
   height: 1px;
   width: var(--modLineWidth);
