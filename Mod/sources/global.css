@@ -45,6 +45,13 @@
   opacity: 1 !important;
 }
 
+/* ALign Vivaldi menu button with panel fix */
+.vivaldi {
+  margin-left: calc(-1 * var(--GXpanelWidth));
+  display: flex !important;
+  width: var(--GXpanelWidth);
+}
+
 /* Stylize window control buttons */
 #browser.win .window-buttongroup {
   fill: var(--GXbuttonFill);
