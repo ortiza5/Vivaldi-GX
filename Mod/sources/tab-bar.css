@@ -8,17 +8,17 @@
 
 /* Give room for increased width of panel when it is shown */
 #browser:not(.horizontal-menu) #tabs-container:not(.none).top,
-#browser.horizontal-menu:has(#panels-container:not([style*="width: 0px;"])) #tabs-container:not(.none).top {
+#browser.horizontal-menu:has(#panels-container:not([style*="width: min(0px"])) #tabs-container:not(.none).top {
   margin-left: var(--GXpanelWidth);
   padding-left: unset;
 }
 #browser:not(.horizontal-menu) #tabs-subcontainer.visible,
-#browser.horizontal-menu:has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible {
+#browser.horizontal-menu:has(#panels-container:not([style*="width: min(0px"])) #tabs-subcontainer.visible {
   padding-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
   padding-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
 }
-#browser:not(.horizontal-menu):has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible,
-#browser.horizontal-menu:has(#panels-container:not([style*="width: 0px;"])) #tabs-subcontainer.visible {
+#browser:not(.horizontal-menu):has(#panels-container:not([style*="width: min(0px"])) #tabs-subcontainer.visible,
+#browser.horizontal-menu:has(#panels-container:not([style*="width: min(0px"])) #tabs-subcontainer.visible {
   margin-left: var(--arePanelsSetToRight, var(--GXpanelWidth));
   margin-right: var(--arePanelsSetToLeft, var(--GXpanelWidth));
   padding: unset;
@@ -74,7 +74,7 @@
   right: var(--arePanelsSetToLeft, 0);
 }
 /* When the panel is hidden contine the border all the way */
-#browser:has(#panels-container[style*="width: 0px;"]):not(:has(#tabs-subcontainer.visible)) #tabs-container::before {
+#browser:has(#panels-container[style*="width: min(0px"]):not(:has(#tabs-subcontainer.visible)) #tabs-container::before {
   left: var(--arePanelsSetToRight, calc(-1 * var(--GXpanelWidth)));
   right: var(--arePanelsSetToLeft, calc(-1 * var(--GXpanelWidth)));
 }

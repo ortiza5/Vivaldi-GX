@@ -60,7 +60,7 @@ footer:has(.toolbar-statusbar)::before {
   backdrop-filter: var(--backgroundBlur);
   background-color: var(--colorBgAlphaBlur) !important;
 }
-#browser:has(#panels-container[style*="width: 0px;"]) footer:has(.toolbar-statusbar)::before {
+#browser:has(#panels-container[style*="width: min(0px"]) footer:has(.toolbar-statusbar)::before {
   left: var(--arePanelsSetToRight, 0);
   right: var(--arePanelsSetToLeft, 0);
 }

@@ -1,8 +1,8 @@
 /* Set the panel bar width */
-#panels-container:not(:fullscreen):not([style*="width: 0px;"]) {
+#panels-container:not(:fullscreen):not([style*="width: min(0px"]) {
   min-width: calc(var(--GXpanelWidth) + 1px) !important;
 }
-#panels-container:not([style*="width: 0px;"]) {
+#panels-container:not([style*="width: min(0px"]) {
   min-width: var(--GXpanelWidth) !important;
 }
 /* Move panel pane over to accomidate new width when set to floating */

@@ -7,13 +7,13 @@
 }
 
 /* Leave space for continued panel bar when it is shown */
-#browser:has(#panels-container:not([style*="width: 0px;"])) .mainbar {
+#browser:has(#panels-container:not([style*="width: min(0px"])) .mainbar {
   margin-left: calc(var(--arePanelsSetToLeft, 0) * var(--GXpanelWidth));
   margin-right: calc(var(--arePanelsSetToRight, 0) * var(--GXpanelWidth));
 }
 
 /* Fill in continued panel bar area with the same color */
-#browser:has(#panels-container:not([style*="width: 0px;"])) .mainbar::before {
+#browser:has(#panels-container:not([style*="width: min(0px"])) .mainbar::before {
   content: " ";
   position: fixed;
   left: var(--arePanelsSetToRight, 0);
@@ -26,7 +26,7 @@
 }
 
 /* Stop the panel bar from extending upwards if tab bar isn't at the top */
-#browser:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+#browser:not(.tabs-top):has(#panels-container:not([style*="width: min(0px"])) {
   --addressBarHeight: 46px;
   --bookmarkBarHeight: 29px;
   --titleBarHeight: 30px;
@@ -47,7 +47,7 @@
 }
 
 /* Border next to continued panel bar if the address bar is set to the top */
-#browser.address-top:has(#panels-container:not([style*="width: 0px;"])) .mainbar .toolbar-mainbar {
+#browser.address-top:has(#panels-container:not([style*="width: min(0px"])) .mainbar .toolbar-mainbar {
   border-left: var(--arePanelsSetToRight, 1px solid var(--GXborderColor)) !important;
   border-right: var(--arePanelsSetToLeft, 1px solid var(--GXborderColor)) !important;
 }
@@ -443,7 +443,7 @@ progress.pageload-indicator {
 }
 
 /* No side margin if tabs aren't set to the top */
-#browser.address-top:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+#browser.address-top:not(.tabs-top):has(#panels-container:not([style*="width: min(0px"])) {
   & .mainbar {
     margin-left: unset;
     margin-right: unset;

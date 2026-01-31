@@ -17,7 +17,7 @@
 #browser.address-top-off.tabs-off:has(#panels-container.right) #header::after {
   background-image: var(--arePanelsSetToLeft, linear-gradient(to left, var(--GXborderColor), transparent));
 }
-#browser.address-top-off.tabs-off:has(#panels-container[style*="width: 0px;"]) #header::after {
+#browser.address-top-off.tabs-off:has(#panels-container[style*="width: min(0px"]) #header::after {
   left: var(--arePanelsSetToRight, 0);
   right: var(--arePanelsSetToLeft, 0);
 }

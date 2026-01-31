@@ -4,13 +4,13 @@
 }
 
 /* Leave space for continued panel bar when it is shown */
-#browser:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
+#browser:has(#panels-container:not([style*="width: min(0px"])) .bookmark-bar {
   margin-left: calc(var(--arePanelsSetToLeft, 0) * var(--GXpanelWidth));
   margin-right: calc(var(--arePanelsSetToRight, 0) * var(--GXpanelWidth));
 }
 
 /* Border next to continued panel bar if the bookmark bar is set to the top */
-#browser.bookmark-bar-top:has(#panels-container:not([style*="width: 0px;"])) .bookmark-bar {
+#browser.bookmark-bar-top:has(#panels-container:not([style*="width: min(0px"])) .bookmark-bar {
   border-left: var(--arePanelsSetToRight, 1px solid var(--GXborderColor)) !important;
   border-right: var(--arePanelsSetToLeft, 1px solid var(--GXborderColor)) !important;
 }
@@ -54,7 +54,7 @@
 }
 
 /* No side margin if tabs aren't set to the top */
-#browser:not(.tabs-top):has(#panels-container:not([style*="width: 0px;"])) {
+#browser:not(.tabs-top):has(#panels-container:not([style*="width: min(0px"])) {
   & .bookmark-bar {
     margin-left: unset;
     margin-right: unset;
